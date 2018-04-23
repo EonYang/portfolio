@@ -1,4 +1,4 @@
-$.getJSON("../data/content.json", (data) => {
+$.getJSON("data/content.json", (data) => {
   loopAllProjects(data);
 });
 
@@ -7,10 +7,6 @@ var loopAllProjects = (data) => {
   $.each(data.projects, (index, value) => {
     generateContent(value);
   });
-  // $("<ul/>", {
-  //   "class": "my-new-list",
-  //   html: items.join("")
-  // }).appendTo("body");
 }
 
 var generateContent = (project) => {
