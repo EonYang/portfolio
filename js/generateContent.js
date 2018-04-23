@@ -15,7 +15,7 @@ var generateContent = (project) => {
     title;
 // generate block
   block = $("<div>", {
-    "class": "block"
+    "class": "block vw50"
   });
 // generate cover element, then append it to block
   switch (project.coverFormate) {
@@ -29,5 +29,7 @@ var generateContent = (project) => {
   }
   cover.appendTo(block);
   block.appendTo("body");
+
+
 
 }

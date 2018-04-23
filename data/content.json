@@ -48,8 +48,9 @@
       "teaser": "In our mind, instead of a realistic hi-resolution beautiful appearances, our constant awareness of ourselves is just a vague and sketchy arrangement of abstract and simplified figures, which is being reflected by this simple mirror.",
       "category": "Interactive Installation",
       "tags": "Face Recognition, Emotional Expression "
-    },
-    {
+    }
+  ],
+  "snippet":[{
       "title": "Finding Direction",
       "coverPath": "path/to/image",
       "coverFormate": "video or image",
@@ -58,6 +59,5 @@
       "teaser": "string",
       "category": "a string, such as processing",
       "tags": "string of words, parse by ',' "
-    }
-  ]
+    }]
 }

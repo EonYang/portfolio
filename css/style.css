@@ -4,17 +4,6 @@ body {
   width: 100%;
 }
 
-.block {
-  background-color: #fff;
-  float: left;
-  width: 50vw;
-  margin: 0px;
-  height: 28.1vw;
-  border-color: #000;
-  border: 0px;
-  display: flex;
-}
-
 h1 {
   text-align: center;
   font-style: italic;
@@ -23,4 +12,22 @@ h1 {
 
 img {
   width: 100%;
+}
+
+.block {
+  background-color: #fff;
+  float: left;
+  border-color: #000;
+  border: 0px;
+  display: flex;
+}
+
+.vw50 {
+  width: 50vw;
+  height: 28.1vw;
+}
+
+.vw100 {
+  width: 100vw;
+  height: 56.2vw;
 }
