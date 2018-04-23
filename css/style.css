@@ -1,0 +1,26 @@
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 0px;
+  width: 100%;
+}
+
+.block {
+  background-color: #fff;
+  float: left;
+  width: 50vw;
+  margin: 0px;
+  height: 28.1vw;
+  border-color: #000;
+  border: 0px;
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  font-style: italic;
+  color: #373fff;
+}
+
+img {
+  width: 100%;
+}
