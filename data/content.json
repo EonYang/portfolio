@@ -1,23 +1,63 @@
 {
-	"projects": [{
-			"title": "Simple Mirror",
-			"coverPath": "images/simple_mirror.png",
-			"coverFormate": "image",
-			"link": "http://yangyang.blog/2017/12/submissions-winter-show-icm-project-simple-mirror/",
-			"time": "Dec, 2017",
-			"teaser": "In our mind, instead of a realistic hi-resolution beautiful appearances, our constant awareness of ourselves is just a vague and sketchy arrangement of abstract and simplified figures, which is being reflected by this simple mirror.",
-			"category": "Interactive Installation",
-			"tags": "Face Recognition, Emotional Expression "
-		},
-		{
-			"title": "Finding Direction",
-			"coverPath": "path/to/image",
-			"coverFormate": "video or image",
-			"link": "link to documentation",
-			"time": "string, month/year",
-			"teaser": "string",
-			"category": "a string, such as processing",
-			"tags": "string of words, parse by ',' "
-		}
-	]
+  "projects": [{
+      "title": "Under Construction",
+      "coverPath": "images/under_construction.png",
+      "coverFormate": "image",
+      "link": "http://yangyang.blog/",
+      "time": "Apr, 2018",
+      "teaser": "Under Construction",
+      "category": "Under Construction",
+      "tags": "Under Construction"
+    },
+    {
+      "title": "Under Construction",
+      "coverPath": "images/under_construction.png",
+      "coverFormate": "image",
+      "link": "http://yangyang.blog/",
+      "time": "Apr, 2018",
+      "teaser": "Under Construction",
+      "category": "Under Construction",
+      "tags": "Under Construction"
+    },
+    {
+      "title": "Under Construction",
+      "coverPath": "images/under_construction.png",
+      "coverFormate": "image",
+      "link": "http://yangyang.blog/",
+      "time": "Apr, 2018",
+      "teaser": "Under Construction",
+      "category": "Under Construction",
+      "tags": "Under Construction"
+    },
+    {
+      "title": "Under Construction",
+      "coverPath": "images/under_construction.png",
+      "coverFormate": "image",
+      "link": "http://yangyang.blog/",
+      "time": "Apr, 2018",
+      "teaser": "Under Construction",
+      "category": "Under Construction",
+      "tags": "Under Construction"
+    },
+    {
+      "title": "Simple Mirror",
+      "coverPath": "images/simple_mirror.png",
+      "coverFormate": "image",
+      "link": "http://yangyang.blog/2017/12/submissions-winter-show-icm-project-simple-mirror/",
+      "time": "Dec, 2017",
+      "teaser": "In our mind, instead of a realistic hi-resolution beautiful appearances, our constant awareness of ourselves is just a vague and sketchy arrangement of abstract and simplified figures, which is being reflected by this simple mirror.",
+      "category": "Interactive Installation",
+      "tags": "Face Recognition, Emotional Expression "
+    },
+    {
+      "title": "Finding Direction",
+      "coverPath": "path/to/image",
+      "coverFormate": "video or image",
+      "link": "link to documentation",
+      "time": "string, month/year",
+      "teaser": "string",
+      "category": "a string, such as processing",
+      "tags": "string of words, parse by ',' "
+    }
+  ]
 }
