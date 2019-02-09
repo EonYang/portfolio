@@ -3,36 +3,11 @@
       "title": "Under Construction",
       "coverPath": "images/under_construction.png",
       "coverFormate": "image",
-      "link": "http://yangyang.blog/",
-      "time": "Apr, 2018",
-      "teaser": "Under Construction",
-      "category": "Under Construction",
-      "tags": "Under Construction"
-    },
-    {
-      "title": "Under Construction",
-      "coverPath": "images/under_construction.png",
-      "coverFormate": "image",
-      "link": "http://yangyang.blog/",
-      "time": "Apr, 2018",
-      "teaser": "Under Construction",
-      "category": "Under Construction",
-      "tags": "Under Construction"
-    },
-    {
-      "title": "Under Construction",
-      "coverPath": "images/under_construction.png",
-      "coverFormate": "image",
-      "link": "http://yangyang.blog/",
-      "time": "Apr, 2018",
-      "teaser": "Under Construction",
-      "category": "Under Construction",
-      "tags": "Under Construction"
-    },
-    {
-      "title": "Under Construction",
-      "coverPath": "images/under_construction.png",
-      "coverFormate": "image",
+      "cover": {
+        "image": "images/under_construction.png",
+        "animationFormat": "none",
+        "animation": "images/under_construction.png"
+      },
       "link": "http://yangyang.blog/",
       "time": "Apr, 2018",
       "teaser": "Under Construction",
@@ -41,23 +16,29 @@
     },
     {
       "title": "Simple Mirror",
-      "coverPath": "images/simple_mirror.png",
-      "coverFormate": "image",
-      "link": "http://yangyang.blog/2017/12/submissions-winter-show-icm-project-simple-mirror/",
+      "cover": {
+        "image": "images/simple_mirror3.jpg",
+        "animationFormat": "gif",
+        "animation": "images/gifs/simple_mirror.gif"
+      },
+      "link": "http://yangyang.blog/2019/02/simple-mirror/",
       "time": "Dec, 2017",
       "teaser": "In our mind, instead of a realistic hi-resolution beautiful appearances, our constant awareness of ourselves is just a vague and sketchy arrangement of abstract and simplified figures, which is being reflected by this simple mirror.",
       "category": "Interactive Installation",
       "tags": "Face Recognition, Emotional Expression "
     }
   ],
-  "snippet":[{
-      "title": "Finding Direction",
-      "coverPath": "path/to/image",
-      "coverFormate": "video or image",
-      "link": "link to documentation",
-      "time": "string, month/year",
-      "teaser": "string",
-      "category": "a string, such as processing",
-      "tags": "string of words, parse by ',' "
-    }]
+  "snippet": [{
+    "title": "Finding Direction",
+    "cover": {
+      "image": "path",
+      "animationFormat": "video/gif/null",
+      "animation": "path"
+    },
+    "link": "link to documentation",
+    "time": "string, month/year",
+    "teaser": "string",
+    "category": "a string, such as processing",
+    "tags": "string of words, parse by ',' "
+  }]
 }
