@@ -13,6 +13,7 @@ var generateContent = (project) => {
     let block,
         cover,
         gifLayer,
+        videoLayer,
         link,
         hoverLayer,
         title;
@@ -24,23 +25,32 @@ var generateContent = (project) => {
     // generate link
     link = $("<a>").attr("href", project.link);
     // generate cover element, then append it to block
-    // switch (project.coverFormate) {
-    //     case "image":
-    //
-    //         break;
-    //     case "video":
-    //         break;
-    // }
 
     cover = $("<img>", {
         "src": project.cover.image,
         "class": "cover"
     });
 
-    gifLayer = $("<img>", {
-        "src": project.cover.animation,
-        "class": "gifLayer block vw50"
-    });
+    if (project.cover.animationFormat == "gif") {
+        gifLayer = $("<img>", {
+            "src": project.cover.animation,
+            "class": "gifLayer block vw50"
+        });
+        gifLayer.appendTo(block);
+    } else if (project.cover.animationFormat == "video") {
+        gifLayer = $("<video />", {
+            "src": project.cover.animation,
+            "class": "videoPlayer gifLayer block vw50",
+            "type": "video/mp4",
+            "controls": false,
+            "loop": true,
+            playsinline: true,
+        });
+        gifLayer.prop("muted", true);
+        gifLayer.prop("autoplay", true);
+        gifLayer.appendTo(block);
+    }
+
 
     hoverLayer = $("<div>", {
         "class": "hoverLayer block vw50"
@@ -50,12 +60,11 @@ var generateContent = (project) => {
     title = $("<h2>", {
         "class": "title vw50",
     });
-    title.append(project.title)
+    title.append(project.title);
 
     //put link in to cover
     // link.appendTo(block);
     cover.appendTo(block);
-    gifLayer.appendTo(block);
     hoverLayer.appendTo(block);
     title.appendTo(block);
     block.appendTo("body");

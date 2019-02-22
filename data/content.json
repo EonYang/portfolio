@@ -26,6 +26,19 @@
       "teaser": "In our mind, instead of a realistic hi-resolution beautiful appearances, our constant awareness of ourselves is just a vague and sketchy arrangement of abstract and simplified figures, which is being reflected by this simple mirror.",
       "category": "Interactive Installation",
       "tags": "Face Recognition, Emotional Expression "
+    },
+    {
+      "title": "New Toy",
+      "cover": {
+        "image": "images/NIME-Cover.jpg",
+        "animationFormat": "video",
+        "animation": "images/gifs/NIME-Cover-Video.mp4"
+      },
+      "link": "http://yangyang.blog/2019/02/new-toy/",
+      "time": "Dec, 2018",
+      "teaser": "What instrument can serve as a expressive role in this era's live digital music performence.",
+      "category": "Instrument, Music, Hardware",
+      "tags": "Physical Computing, Instrument, Gadget"
     }
   ],
   "snippet": [{
