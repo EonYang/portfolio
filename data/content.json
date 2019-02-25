@@ -62,6 +62,18 @@
       "category": "Game, Web,",
       "tags": "Game, Nodejs, P5js, SocketIO, DWD, Web"
     },{
+      "title": "Zen Dog",
+      "cover": {
+        "image": "images/zenDog-Cover.jpg",
+        "animationFormat": "video",
+        "animation": "images/videos/zenDog-Cover-Video.mp4"
+      },
+      "link": "http://yangyang.blog/2019/02/zen-dog/",
+      "time": "Mar, 2018",
+      "teaser": "Yo dog come to my dojo and meditate like a Zen master",
+      "category": "Game, Web, ",
+      "tags": "Game, Nodejs, P5js, SocketIO, DWD, Web, Babel, MongoDB, Webpack, EJS"
+    },{
       "title": "Under Construction",
       "coverPath": "images/under_construction.png",
       "coverFormate": "image",
