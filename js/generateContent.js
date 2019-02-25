@@ -2,6 +2,7 @@ $.getJSON("data/content.json", (data) => {
     loopAllProjects(data);
 });
 
+
 var loopAllProjects = (data) => {
     var items = [];
     $.each(data.projects, (index, value) => {

@@ -1,5 +1,67 @@
 {
-  "projects": [{
+  "projects": [
+    {
+      "title": "Simple Mirror",
+      "cover": {
+        "image": "images/simpleMirror-Cover.jpg",
+        "animationFormat": "video",
+        "animation": "images/videos/simpleMirror-Cover-Video.mp4"
+      },
+      "link": "http://yangyang.blog/2019/02/simple-mirror/",
+      "time": "Dec, 2017",
+      "teaser": "In our mind, instead of a realistic hi-resolution beautiful appearances, our constant awareness of ourselves is just a vague and sketchy arrangement of abstract and simplified figures, which is being reflected by this simple mirror.",
+      "category": "Interactive Installation",
+      "tags": "Face Recognition, Emotional Expression "
+    },
+    {
+      "title": "New Toy",
+      "cover": {
+        "image": "images/NIME-Cover.jpg",
+        "animationFormat": "video",
+        "animation": "images/videos/NIME-Cover-Video.mp4"
+      },
+      "link": "http://yangyang.blog/2019/02/new-toy/",
+      "time": "Dec, 2018",
+      "teaser": "What instrument can serve as a expressive role in this era's live digital music performence.",
+      "category": "Instrument, Music, Hardware",
+      "tags": "Physical Computing, Instrument, Gadget"
+    },{
+      "title": "Oblivion",
+      "cover": {
+        "image": "images/Oblivion-Cover.jpg",
+        "animationFormat": "video",
+        "animation": "images/videos/Oblivion-Cover-Video.mp4"
+      },
+      "link": "http://yangyang.blog/2019/02/oblivion/",
+      "time": "Nov, 2018",
+      "teaser": "A tiny story created for a unconventional screen.",
+      "category": "Animation, Film, Storytelling",
+      "tags": "BigScreens, Animation, Storytelling, Digital"
+    },{
+      "title": "It's Time to Go to Time",
+      "cover": {
+        "image": "images/ittgtt-Cover.jpg",
+        "animationFormat": "video",
+        "animation": "images/videos/ittgtt-Cover-Video.mp4"
+      },
+      "link": "http://yangyang.blog/2019/02/its-time-to-go-to-time/",
+      "time": "Apr, 2018",
+      "teaser": "A unconventional VR experience.",
+      "category": "VR, 360,",
+      "tags": "Unity, VR, 360, Livestream, Server"
+    },{
+      "title": "Bully",
+      "cover": {
+        "image": "images/bully-Cover.jpg",
+        "animationFormat": "video",
+        "animation": "images/videos/bully-Cover-Video.mp4"
+      },
+      "link": "http://yangyang.blog/2019/02/bully/",
+      "time": "Mar, 2018",
+      "teaser": "Bully is a web-based multiplayer game that represents the essence of our world —— bully.",
+      "category": "Game, Web,",
+      "tags": "Game, Nodejs, P5js, SocketIO, DWD, Web"
+    },{
       "title": "Under Construction",
       "coverPath": "images/under_construction.png",
       "coverFormate": "image",
@@ -13,34 +75,9 @@
       "teaser": "Under Construction",
       "category": "Under Construction",
       "tags": "Under Construction"
-    },
-    {
-      "title": "Simple Mirror",
-      "cover": {
-        "image": "images/simple_mirror3.jpg",
-        "animationFormat": "gif",
-        "animation": "images/gifs/simple_mirror.gif"
-      },
-      "link": "http://yangyang.blog/2019/02/simple-mirror/",
-      "time": "Dec, 2017",
-      "teaser": "In our mind, instead of a realistic hi-resolution beautiful appearances, our constant awareness of ourselves is just a vague and sketchy arrangement of abstract and simplified figures, which is being reflected by this simple mirror.",
-      "category": "Interactive Installation",
-      "tags": "Face Recognition, Emotional Expression "
-    },
-    {
-      "title": "New Toy",
-      "cover": {
-        "image": "images/NIME-Cover.jpg",
-        "animationFormat": "video",
-        "animation": "images/gifs/NIME-Cover-Video.mp4"
-      },
-      "link": "http://yangyang.blog/2019/02/new-toy/",
-      "time": "Dec, 2018",
-      "teaser": "What instrument can serve as a expressive role in this era's live digital music performence.",
-      "category": "Instrument, Music, Hardware",
-      "tags": "Physical Computing, Instrument, Gadget"
     }
   ],
+
   "snippet": [{
     "title": "Finding Direction",
     "cover": {

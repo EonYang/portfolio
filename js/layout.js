@@ -21,4 +21,10 @@ var resize = () => {
 
 setTimeout(() => {
     resize();
+    $("#headerBlock").click(
+        function() {
+            window.open(
+                "http://yangyang.blog/2019/02/my-portfolio-page/", '_blank');
+        }
+    );
 }, 50);
