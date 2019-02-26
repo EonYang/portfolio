@@ -15,7 +15,7 @@ img {
 }
 
 .block {
-  background-color: #fff;
+    background-color: #fff;
     float: left;
     border-color: #000;
     border: 0px;
@@ -23,18 +23,21 @@ img {
 }
 
 .header {
-		width: 100%;
-		height: 150px;
+    width: 100%;
+    height: 150px;
 }
-.header-content{
-  background-color: #fff;
+
+.header-content {
+    background-color: #fff;
     border-color: #000;
 }
+
 .banner100 {
     width: 100vw;
     height: 30vw;
     line-height: 30vw;
 }
+
 .banner50 {
     width: 100vw;
     height: 20vw;
@@ -44,7 +47,7 @@ img {
 .vw50 {
     width: 50vw;
     height: 28.1vw;
-	line-height:28.1vw;
+    line-height: 28.1vw;
 }
 
 .vw100 {
@@ -59,6 +62,7 @@ img {
 }
 
 .gifLayer {
+    cursor: pointer;
     opacity: 0;
     object-fit: cover;
     object-position: center;

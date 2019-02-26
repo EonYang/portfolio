@@ -50,6 +50,18 @@
       "category": "VR, 360,",
       "tags": "Unity, VR, 360, Livestream, Server"
     },{
+      "title": "The Machine of Boredom",
+      "cover": {
+        "image": "images/woodenHand-Cover.jpg",
+        "animationFormat": "video",
+        "animation": "images/videos/woodenHand-Cover-Video.mp4"
+      },
+      "link": "http://yangyang.blog/2019/02/the-machine-of-boredom/",
+      "time": "Dec, 2017",
+      "teaser": "How does the human who is watching a machine playing fidget spinner feel? Is this the ultimate of boredom?",
+      "category": "Pcomp",
+      "tags": "Servo, Raspberry Pi"
+    },{
       "title": "Bully",
       "cover": {
         "image": "images/bully-Cover.jpg",
