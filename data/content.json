@@ -62,6 +62,18 @@
       "category": "Pcomp",
       "tags": "Servo, Raspberry Pi"
     },{
+      "title": "Todd",
+      "cover": {
+        "image": "images/todd-Cover.jpg",
+        "animationFormat": "video",
+        "animation": "images/videos/todd-Cover-Video.mp4"
+      },
+      "link": "http://yangyang.blog/2019/02/todd/",
+      "time": "Oct, 2018",
+      "teaser": "Todd is an alcoholic hamster and a retired Jedi.",
+      "category": "3D print, Toy, Design",
+      "tags": "Maya, 3D printing, modeling, Design, Art Toy"
+    },{
       "title": "Bully",
       "cover": {
         "image": "images/bully-Cover.jpg",
