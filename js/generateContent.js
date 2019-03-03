@@ -73,7 +73,7 @@ var generateContent = (project) => {
     block.click(
         function() {
             window.open(
-                project.link, '_blank');
+                project.link, '_self');
         }
     );
 };
