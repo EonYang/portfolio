@@ -17,7 +17,8 @@ var generateContent = (project) => {
         videoLayer,
         link,
         hoverLayer,
-        title;
+        title,
+        tags;
     // generate block
     block = $("<div>", {
         "class": "block vw50"
@@ -62,12 +63,18 @@ var generateContent = (project) => {
         "class": "title vw50",
     });
     title.append(project.title);
+    tags = $("<p>", {
+        "class": "tags vw50"
+    });
+    tags.append(project.tags);
+
 
     //put link in to cover
     // link.appendTo(block);
     cover.appendTo(block);
     hoverLayer.appendTo(block);
     title.appendTo(block);
+    tags.appendTo(block);
     block.appendTo("body");
 
     block.click(

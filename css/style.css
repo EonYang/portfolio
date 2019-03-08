@@ -97,6 +97,27 @@ img {
     opacity: 0;
 }
 
+.tags {
+    text-shadow: 2px 2px 8px #000000FF;
+    text-align: left;
+    color: white;
+    position: absolute;
+    opacity: 0.7;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    line-height: 1em;
+    font-size: 0.85em;
+    padding: 12px;
+    font-weight: 100;
+}
+
+.tags:hover {
+    opacity: 0;
+}
+
 .title {
     text-align: center;
     color: white;

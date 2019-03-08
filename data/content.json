@@ -36,7 +36,7 @@
       "time": "Nov, 2018",
       "teaser": "A tiny story created for a unconventional screen.",
       "category": "Animation, Film, Storytelling",
-      "tags": "BigScreens, Animation, Storytelling, Digital"
+      "tags": "Cinema 4D, BigScreens, Animation, Storytelling, Digital"
     },{
       "title": "It's Time to Go to Time",
       "cover": {
@@ -60,7 +60,7 @@
       "time": "Dec, 2017",
       "teaser": "How does the human who is watching a machine playing fidget spinner feel? Is this the ultimate of boredom?",
       "category": "Pcomp",
-      "tags": "Servo, Raspberry Pi"
+      "tags": "Physical Computing, Servo, Raspberry Pi"
     },{
       "title": "Todd",
       "cover": {
@@ -132,7 +132,19 @@
       "time": "Dec, 2016",
       "teaser": "I was a productive product designer",
       "category": "App, SNS, product design",
-      "tags": "App, SNS, product design"
+      "tags": "App, SNS, Product design"
+    },{
+      "title": "ITP Spring Show Poster",
+      "cover": {
+        "image": "images/brainRoller-Cover.png",
+        "animationFormat": "video",
+        "animation": "images/videos/brainRoller-Cover-Video.mp4"
+      },
+      "link": "http://yangyang.blog/2019/03/poster-design-for-2018-itp-spring-show/",
+      "time": "Oct, 2017",
+      "teaser": "Poster Design Campain Winner",
+      "category": "Poster, Design, Drawing, Animation",
+      "tags": "Poster, Design, Drawing, Animation"
     },{
       "title": "Under Construction",
       "coverPath": "images/under_construction.png",
