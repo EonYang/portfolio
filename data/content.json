@@ -11,7 +11,7 @@
       "time": "Dec, 2017",
       "teaser": "In our mind, instead of a realistic hi-resolution beautiful appearances, our constant awareness of ourselves is just a vague and sketchy arrangement of abstract and simplified figures, which is being reflected by this simple mirror.",
       "category": "Interactive Installation",
-      "tags": "Face Recognition, Emotional Expression "
+      "tags": "Highly Interactive, Emotional Expression"
     },
     {
       "title": "New Toy",
@@ -24,7 +24,7 @@
       "time": "Dec, 2018",
       "teaser": "What instrument can serve as a expressive role in this era's live digital music performence.",
       "category": "Instrument, Music, Hardware",
-      "tags": "Physical Computing, Instrument, Gadget"
+      "tags": "Led + Instrument"
     },{
       "title": "Oblivion",
       "cover": {
@@ -36,7 +36,7 @@
       "time": "Nov, 2018",
       "teaser": "A tiny story created for a unconventional screen.",
       "category": "Animation, Film, Storytelling",
-      "tags": "Cinema 4D, BigScreens, Animation, Storytelling, Digital"
+      "tags": "Fusion Film Festival, Best Animation Short winner."
     },{
       "title": "It's Time to Go to Time",
       "cover": {
@@ -48,7 +48,7 @@
       "time": "Apr, 2018",
       "teaser": "A unconventional VR experience.",
       "category": "VR, 360,",
-      "tags": "Unity, VR, 360, Livestream, Server"
+      "tags": "Beyond surprising, VR"
     },{
       "title": "The Machine of Boredom",
       "cover": {
@@ -60,7 +60,7 @@
       "time": "Dec, 2017",
       "teaser": "How does the human who is watching a machine playing fidget spinner feel? Is this the ultimate of boredom?",
       "category": "Pcomp",
-      "tags": "Physical Computing, Servo, Raspberry Pi"
+      "tags": "Attention Getting"
     },{
       "title": "Todd",
       "cover": {
@@ -72,7 +72,7 @@
       "time": "Oct, 2018",
       "teaser": "Todd is an alcoholic hamster and a retired Jedi.",
       "category": "3D print, Toy, Design",
-      "tags": "Maya, 3D printing, modeling, Design, Art Toy"
+      "tags": "Cute, Art Toy"
     },{
       "title": "Bully",
       "cover": {
@@ -84,7 +84,7 @@
       "time": "Mar, 2018",
       "teaser": "Bully is a web-based multiplayer game that represents the essence of our world —— bully.",
       "category": "Game, Web,",
-      "tags": "Game, Nodejs, P5js, SocketIO, DWD, Web"
+      "tags": "A game imitating our world"
     },{
       "title": "Zen Dog",
       "cover": {
@@ -96,7 +96,7 @@
       "time": "Mar, 2018",
       "teaser": "Yo dog come to my dojo and meditate like a Zen master",
       "category": "Game, Web, ",
-      "tags": "Game, Nodejs, P5js, SocketIO, DWD, Web, Babel, MongoDB, Webpack, EJS"
+      "tags": "Game about meditation"
     },{
       "title": "Which Pill",
       "cover": {
@@ -108,7 +108,7 @@
       "time": "Dec, 2018",
       "teaser": "Only one of those players will survive.",
       "category": "Game, Web,",
-      "tags": "Game, Nodejs, SocketIO, DWD, Web"
+      "tags": "Game about choices"
     },{
       "title": "P5.js Skethes",
       "cover": {
@@ -120,7 +120,7 @@
       "time": "Nov, 2017",
       "teaser": "Come and see my dark humor.",
       "category": "Game, Web,",
-      "tags": "Game, P5js, processing"
+      "tags": "Game, P5js, Processing"
     },{
       "title": "Pre-ITP Projects",
       "cover": {
@@ -132,7 +132,7 @@
       "time": "Dec, 2016",
       "teaser": "I was a productive product designer",
       "category": "App, SNS, product design",
-      "tags": "App, SNS, Product design"
+      "tags": "App, SNS, Product design, and my past"
     },{
       "title": "ITP Spring Show Poster",
       "cover": {
@@ -144,24 +144,9 @@
       "time": "Oct, 2017",
       "teaser": "Poster Design Campain Winner",
       "category": "Poster, Design, Drawing, Animation",
-      "tags": "Poster, Design, Drawing, Animation"
-    },{
-      "title": "Under Construction",
-      "coverPath": "images/under_construction.png",
-      "coverFormate": "image",
-      "cover": {
-        "image": "images/under_construction.png",
-        "animationFormat": "none",
-        "animation": "images/under_construction.png"
-      },
-      "link": "http://yangyang.blog/",
-      "time": "Apr, 2018",
-      "teaser": "Under Construction",
-      "category": "Under Construction",
-      "tags": "Under Construction"
+      "tags": "Mind blowing poster, literally"
     }
   ],
-
   "snippet": [{
     "title": "Finding Direction",
     "cover": {
