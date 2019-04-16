@@ -133,3 +133,13 @@ img {
 .title:hover {
     opacity: 0;
 }
+
+.toMyBlog{
+  position: fixed;
+    top: 32px;
+    left: 32px;
+    width: 128px;
+    z-index: 99999;
+    border-radius: 12px;
+    box-shadow: 1px 16px 20px #0000001a;
+}
