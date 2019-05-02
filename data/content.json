@@ -1,6 +1,19 @@
 {
   "projects": [
     {
+      "title": "Magical Pencil",
+      "cover": {
+        "image": "images/MagicalPencil-Cover.jpg",
+        "animationFormat": "video",
+        "animation": "images/videos/MagicalPencil-Cover-Video.mp4"
+      },
+      "link": "http://yangyang.blog/2019/04/magical-pencil/",
+      "time": "April, 2019",
+      "teaser": "An ITP-ish video game, made with New Interaction, Machine Learning, Creativity, Storytelling and Love.",
+      "category": "Video Game",
+      "tags": "New Interaction, Machine Learning, Storytelling"
+    },
+    {
       "title": "Simple Mirror",
       "cover": {
         "image": "images/simpleMirror-Cover.jpg",
