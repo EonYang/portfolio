@@ -47,7 +47,7 @@ $.getJSON("data/content.json", (res) => {
 
 
 function startObserve() {
-    if (!vueApp.data.isMobile) {
+    if (vueApp.data.isMobile) {
         $(".coverContainer").each((index, element) => {
             observer.observe(element);
         })
