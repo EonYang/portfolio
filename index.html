@@ -2,38 +2,58 @@
 <html lang="en">
 
 <head>
-    <title>Yang's Portfolio</title>
-    <link rel="icon" type="image/png" href="./fav/favicon-32x32.png" />
-    <link rel="icon" type="image/png" href="./fav/favicon-16x16.png" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/generateContent.js" type="text/javascript">
-    </script>
-    <script src="js/layout.js" type="text/javascript">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Yang's Portfolio</title>
+  <link rel="icon" type="image/png" href="./fav/favicon-32x32.png" />
+  <link rel="icon" type="image/png" href="./fav/favicon-16x16.png" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/vueApp.js"></script>
 </head>
 
 <body>
-  <!-- <div class="toMyBlog">
-    <a href="http://yangyang.blog/">
-      <img class="toMyBlog" src="images/logo/myBlog.png" alt="back to my blog">
-</a>
-  </div> -->
-    <div class="header" id = "headerBlock">
-        <div class="header-content">
-            <img src="images/logo/logoBG.jpg" class="header gifLayer" alt="logo background">
-            <img class="header cover" src="images/logo/logo_portfolio.png" alt="my logo">
-        </div>
-        <div class="hoverLayer"></div>
-        <div class="hover-content">
-
-        </div>
-
+  <a href="http://yangyang.blog/2019/02/my-portfolio-page/">
+  <div class="header">
+    <img src="images/logo/logoBG.png" class="header" alt="A sketch">
+    <div class="header position-absolute w-100 disapperWhenHover" style="top: 0px;">
+      <div class="title w-75 h2 h-autofont-weight-bold text-uppercase">
+        Yang's Portfolio</div>
     </div>
+  </div>
+</a>
+  <div id="app" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 col-lg-4 " v-for="item in projects">
+        <div class="coverContainer position-relative my-2 mx-auto" @click="openLink(item.link)">
+          <video autoplay muted class="centerCrop position-absolute w-100 h-100" style="top:0px;"
+            :src="item.cover.animation" type="video/mp4" loop="loop" playsinline="true" autoplay></video>
+
+          <div class="w-100 h-100 position-absolute disapperWhenHover" style="top:0px;">
+            <img class="centerCrop w-100 h-100 position-absolute" style="top:0px;" :src="item.cover.image">
+
+            <div class="darkOverlay w-100 h-100"></div>
+            <div class="title w-50 h2 h-auto mx-auto font-weight-lighter text-uppercase"
+              >
+              {{item.title}}</div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- close row -->
+  </div> <!-- close container -->
+
 </body>
 
 </html>
