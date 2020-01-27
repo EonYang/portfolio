@@ -39,13 +39,12 @@
   <div id="app" class="container-fluid">
     <div class="row">
       <div class="col-sm-6 col-lg-4 " v-for="item in projects">
-        <div 
-        
+        <div  
         class="coverContainer position-relative my-2 mx-auto" @click="openLink(item.link)">
-          <video autoplay muted class="centerCrop position-absolute w-100 h-100" style="top:0px;" :src="item.cover.animation" type="video/mp4" loop="loop" playsinline="true" autoplay></video>
+          <video autoplay muted class="centerCrop position-absolute" style="top:0px;" :src="item.cover.animation" type="video/mp4" loop="loop" playsinline="true" autoplay></video>
           <div class="w-100 h-100 position-absolute disapperWhenHover" style="top:0px;">
             <img class="centerCrop w-100 h-100 position-absolute" style="top:0px;" :src="item.cover.image">
-            <div class="darkOverlay w-100 h-100"></div>
+            <div class="darkOverlay "></div>
             <div class="title w-50 h2 h-auto mx-auto font-weight-lighter text-uppercase"
               >
               {{item.title}}</div>
