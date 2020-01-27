@@ -23,8 +23,12 @@ var observer = new IntersectionObserver((entries) => {
     console.log(entries);
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            $(entry.target).find(".darkOverlay").fadeTo("slow", 0);
+            setTimeout(()=>{
+                $(entry.target).find(".darkOverlay").fadeTo("slow", 0);
             $(entry.target).find("img").fadeTo("slow", 0);
+
+            },1200)
+            
         } else {
             $(entry.target).find(".darkOverlay").fadeTo("slow", 0.6);
             $(entry.target).find("img").fadeTo("slow", 1);
@@ -43,7 +47,7 @@ $.getJSON("data/content.json", (res) => {
 
 
 function startObserve() {
-    if (vueApp.data.isMobile) {
+    if (!vueApp.data.isMobile) {
         $(".coverContainer").each((index, element) => {
             observer.observe(element);
         })
