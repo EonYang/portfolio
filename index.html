@@ -18,10 +18,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
   </script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.js"></script>
-
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="js/vueApp.js"></script>
+  <script src="https://unpkg.com/vue-observe-visibility/dist/vue-observe-visibility.min.js"></script>
+  
 </head>
 
 <body>
@@ -34,16 +34,17 @@
     </div>
   </div>
 </a>
+
+
   <div id="app" class="container-fluid">
     <div class="row">
       <div class="col-sm-6 col-lg-4 " v-for="item in projects">
-        <div class="coverContainer position-relative my-2 mx-auto" @click="openLink(item.link)">
-          <video autoplay muted class="centerCrop position-absolute w-100 h-100" style="top:0px;"
-            :src="item.cover.animation" type="video/mp4" loop="loop" playsinline="true" autoplay></video>
-
+        <div 
+        
+        class="coverContainer position-relative my-2 mx-auto" @click="openLink(item.link)">
+          <video autoplay muted class="centerCrop position-absolute w-100 h-100" style="top:0px;" :src="item.cover.animation" type="video/mp4" loop="loop" playsinline="true" autoplay></video>
           <div class="w-100 h-100 position-absolute disapperWhenHover" style="top:0px;">
             <img class="centerCrop w-100 h-100 position-absolute" style="top:0px;" :src="item.cover.image">
-
             <div class="darkOverlay w-100 h-100"></div>
             <div class="title w-50 h2 h-auto mx-auto font-weight-lighter text-uppercase"
               >
@@ -52,18 +53,30 @@
         </div>
       </div>
     </div> <!-- close row -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div>isMobile: {{isMobile}}</div>
   </div> <!-- close container -->
-
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <div>isMobile: {{isMobile}}</div>
+  
 </body>
+
+<script src="js/vueApp.js"></script>
 
 </html>
