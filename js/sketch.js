@@ -1,3 +1,5 @@
+
+
 let pts = [];
 let movingFast = false;
 let speedThreshold = 1;
@@ -6,6 +8,23 @@ let speed;
 let canvas
 
 function setup() {
+    // let isMobile = false;
+
+    // try {
+    //     document.createEvent("TouchEvent");
+    //     isMobile = true;
+    // } catch (e) {
+    //     console.log(e);
+    // }
+
+    // if(isMobile){
+    //     $(()=>{
+    //         $("#mySketchCanvas").remove();
+    //         noLoop();
+    //     })
+    // }
+
+
     frameRate(60);
     canvas = createCanvas(windowWidth, windowHeight);
     mouseLastPos = createVector(mouseX, mouseY);

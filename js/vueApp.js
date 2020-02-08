@@ -61,16 +61,16 @@ $(() => {
             mobile: false,
             elementsInView: [],
             observer: undefined,
-            selected:  "All",
+            selected: "All",
         },
         methods: {
-            setFilter: function (cat){
+            setFilter: function (cat) {
                 console.log(cat);
                 this.selected = cat;
             },
             openLink: function (link) {
                 console.log("clicked");
-                window.open(link, "_blank")
+                window.open(link, "_blank");
             },
             isMobile: function () {
                 try {
@@ -150,7 +150,7 @@ $(() => {
                 .then(() => {
                     if (isMobile()) {
                         $(".coverContainer").each((index, element) => {
-                            observer.observe(element);
+                            this.observer.observe(element);
                         })
                     } else {
                         let eles = $('.coverContainer');
