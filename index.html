@@ -67,20 +67,28 @@
           aria-controls="myFilter" aria-label="My filter toggler">
           <small><b>{{selected}}</b> </small>
         </button>
-        <button class="btn dropdown-toggle" type="button" data-toggle="collapse" data-target="#myFilter"
-        aria-controls="myFilter" aria-label="My filter toggler">
+        <button class="btn dropdown-toggle d-md-none" type="button" data-toggle="collapse" data-target="#myFilter"
+          aria-controls="myFilter" aria-label="My filter toggler">
           <span class="caret"></span>
           <span class="sr-only">Split button!</span>
         </button>
       </div>
-      <div class="collapse navbar-collapse" id="myFilter">
-        <ul class="navbar-nav nav-pills">
+      <div class="collapse navbar-collapse " id="myFilter">
+        <ul class="navbar-nav nav-pills d-block d-md-none">
           <li class="nav-item" v-for="cat in categories">
             <a href="#" class="nav-link" :class="{active: cat == selected}" @click="setFilter(cat)"
               data-toggle="collapse" data-target="#myFilter">
               <small class="ml-4">{{cat}}</small></a>
           </li>
         </ul>
+      </div>
+      <div class="d-none d-md-block w-100">
+        <div class="row navbar-nav nav-pills">
+          <div class="nav-item" v-for="cat in categories">
+            <a href="#" class="nav-link mx-auto" :class="{active: cat == selected}" @click="setFilter(cat)">
+              <small>{{cat}}</small></a>
+          </div>
+        </div>
       </div>
     </nav>
     <div class="row">
@@ -98,27 +106,28 @@
         </div>
       </div>
     </div> <!-- close row -->
-  </div> <!-- close container -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-  <div>isMobile: {{isMobile}}</div>
+    <div>isMobile: {{mobile}}</div>
+  </div> <!-- close container -->
+
 
 </body>
 

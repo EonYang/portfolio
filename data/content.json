@@ -10,7 +10,7 @@
       "link": "http://yangyang.blog/2019/04/magical-pencil/",
       "time": "April, 2019",
       "teaser": "An ITP-ish video game, made with New Interaction, Machine Learning, Creativity, Storytelling and Love.",
-      "category": "Game",
+      "category": "Game, Storytelling",
       "tags": "Machine Learning, Storytelling"
     },
     {
@@ -23,7 +23,7 @@
       "link": "http://yangyang.blog/2019/02/simple-mirror/",
       "time": "Dec, 2017",
       "teaser": "In our mind, instead of a realistic hi-resolution beautiful appearances, our constant awareness of ourselves is just a vague and sketchy arrangement of abstract and simplified figures, which is being reflected by this simple mirror.",
-      "category": "Interactive Installation",
+      "category": "Interactive Installation, Creative Coding",
       "tags": "Interactive Installation,"
     },
     {
@@ -36,7 +36,7 @@
       "link": "http://yangyang.blog/2019/02/new-toy/",
       "time": "Dec, 2018",
       "teaser": "What instrument can serve as a expressive role in this era's live digital music performence.",
-      "category": "Instrument, Music",
+      "category": "Instrument",
       "tags": "Led + Instrument"
     },{
       "title": "Oblivion",
@@ -72,7 +72,7 @@
       "link": "http://yangyang.blog/2019/02/the-machine-of-boredom/",
       "time": "Dec, 2017",
       "teaser": "How does the human who is watching a machine playing fidget spinner feel? Is this the ultimate of boredom?",
-      "category": "Interactive Installation",
+      "category": "Interactive Installation, Creative Coding",
       "tags": "Attention Getting"
     },{
       "title": "Todd",
@@ -108,7 +108,7 @@
       "link": "http://yangyang.blog/2019/02/zen-dog/",
       "time": "Mar, 2018",
       "teaser": "Yo dog come to my dojo and meditate like a Zen master",
-      "category": "Game",
+      "category": "Game, Creative Coding",
       "tags": "Game about meditation"
     },{
       "title": "Which Pill",
@@ -120,7 +120,7 @@
       "link": "http://yangyang.blog/2019/02/which-pill/",
       "time": "Dec, 2018",
       "teaser": "Only one of those players will survive.",
-      "category": "Game",
+      "category": "Game, Creative Coding",
       "tags": "Game about choices"
     },{
       "title": "P5.js Skethes",
