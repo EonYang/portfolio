@@ -18,35 +18,78 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
   </script>
 
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/vue-observe-visibility/dist/vue-observe-visibility.min.js"></script>
-  
+  <script src="js/vueApp.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.min.js"></script>
+  <script src="js/sketch.js"></script>
+
 </head>
 
 <body>
-  <a href="http://yangyang.blog/2019/02/my-portfolio-page/">
-  <div class="header">
+  <div id="mySketchCanvas" style="pointer-events: none; z-index: 999;" class="d-block position-fixed w-100 h-100">
+  </div>
+  <a class="d-none" "href=" http://yangyang.blog/2019/02/my-portfolio-page/"> <div class="header">
     <img src="images/logo/logoBG.png" class="header" alt="A sketch">
     <div class="header position-absolute w-100 disapperWhenHover" style="top: 0px;">
       <div class="title w-75 h2 h-autofont-weight-bold text-uppercase">
         Yang's Portfolio</div>
     </div>
-  </div>
-</a>
+    </div>
+  </a>
+
+  <nav class="navbar bg-none navbar-dark navbar-expand-sm" id="header">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="http://yangyang.blog/portfolio/"><b>Yang's Projects</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myToggleNav"
+        aria-controls="myToggleNav" aria-label="Navigation Toggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myToggleNav">
+        <div class="navbar-nav ml-auto  ">
+          <a class="nav-item nav-link active" href="http://yangyang.blog/portfolio/">Projects</a>
+          <a class="nav-item nav-link" href="http://yangyang.blog/">Latest</a>
+          <a class="nav-item nav-link" href="http://yangyang.blog/about/">About Me</a>
+          <a class="nav-item nav-link" href="http://yangyang.blog/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
 
   <div id="app" class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="btn-group">
+        <button class="btn navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#myFilter"
+          aria-controls="myFilter" aria-label="My filter toggler">
+          <small><b>{{selected}}</b> </small>
+        </button>
+        <button class="btn dropdown-toggle" type="button" data-toggle="collapse" data-target="#myFilter"
+        aria-controls="myFilter" aria-label="My filter toggler">
+          <span class="caret"></span>
+          <span class="sr-only">Split button!</span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myFilter">
+        <ul class="navbar-nav nav-pills">
+          <li class="nav-item" v-for="cat in categories">
+            <a href="#" class="nav-link" :class="{active: cat == selected}" @click="setFilter(cat)"
+              data-toggle="collapse" data-target="#myFilter">
+              <small class="ml-4">{{cat}}</small></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <div class="row">
-      <div class="col-sm-6 col-lg-4 " v-for="item in projects">
-        <div  
-        class="coverContainer position-relative my-2 mx-auto" @click="openLink(item.link)">
-          <video autoplay muted class="centerCrop position-absolute" style="top:0px;" :src="item.cover.animation" type="video/mp4" loop="loop" playsinline="true" autoplay></video>
+      <div class="col-md-6 col-lg-4 " v-for="item in projects"
+        v-if="selected == 'All' || item.category.includes(selected)">
+        <div class="coverContainer position-relative my-2 mx-auto" @click="openLink(item.link)">
+          <video autoplay muted class="centerCrop position-absolute" style="top:0px;" :src="item.cover.animation"
+            type="video/mp4" loop="loop" playsinline="true" autoplay></video>
           <div class="w-100 h-100 position-absolute disapperWhenHover" style="top:0px;">
             <img class="centerCrop w-100 h-100 position-absolute" style="top:0px;" :src="item.cover.image">
             <div class="darkOverlay "></div>
-            <div class="title w-50 h2 h-auto mx-auto font-weight-lighter text-uppercase"
-              >
+            <div class="title w-50 h2 h-auto mx-auto font-weight-lighter text-uppercase">
               {{item.title}}</div>
           </div>
         </div>
@@ -71,11 +114,11 @@
   <br>
   <br>
   <br>
-  
+
   <div>isMobile: {{isMobile}}</div>
-  
+
 </body>
 
-<script src="js/vueApp.js"></script>
+
 
 </html>
