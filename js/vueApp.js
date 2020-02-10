@@ -6,21 +6,60 @@ $(() => {
             categories: ["All"],
             mobile: false,
             elementsInView: [],
-            observer: undefined,
+            videoObserver: undefined,
+            animationObserver: undefined,
             selected: "All",
+            selected2: "All",
+            cnt: 0,
         },
         methods: {
             setFilter: function (cat) {
-                console.log(cat);
+                console.log(this.cnt);
+                //change cursor position
                 this.selected = cat;
-                setTimeout(()=>{
-                    if (this.mobile) {
+                //fade out all
+                $(".coverContainer").each((index, element) => {
+                    try {
+                        $(element).removeClass("animated fadeOut faster fadeIn slow");
+                        element.removeEventListener('animationend', element.onAnimationEnd);
+                    } catch (error) {
+                        console.log(error);
+                    }
+                    $(element).addClass("animated fadeOut faster");
+                    if (index == 0) {
+                        element.onAnimationEnd = () => {
+                            console.log("1st called");
+                            this.$data.selected2 = cat;
+                            $(".coverContainer").each((index, element) => {
+                                // if (this.mobile) {
+                                //     this.videoObserver.observe(element);
+                                // }
+                                this.animationObserver.observe(element);
+                            })
+                            // setTimeout(()=>{
+                                $(element).removeClass("animated fadeOut faster");
+                            // },10);
+                        }
+                        element.addEventListener('animationend', element.onAnimationEnd)
+                    } else {
+                        element.onAnimationEnd = () => {
+                            console.log("others called");
+                            $(element).removeClass("animated fadeOut faster");
+                        }
+                        element.addEventListener('animationend', element.onAnimationEnd);
+                    }
+                })
+
+                setTimeout(() => {
+
                     $(".coverContainer").each((index, element) => {
-                        this.observer.observe(element);
+                        if (this.mobile) {
+                            this.videoObserver.observe(element);
+                        }
+                        // this.animationObserver.observe(element);
                     })
-                }
-                },500);
-                
+                }, 601);
+
             },
             openLink: function (link) {
                 console.log("clicked");
@@ -55,10 +94,26 @@ $(() => {
         },
         mounted: function () {
             this.mobile = this.isMobile();
-            // create intersection observer
+            // create intersection videoObserver
+
+            this.animationObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        console.log("intersecting")
+                        $(entry.target).removeClass("animated fadeOut faster slow");
+                        $(entry.target).addClass("animated fadeIn slow");
+                    } else {
+                        console.log("not intersecting")
+                        $(entry.target).removeClass("animated fadeIn slow");
+                        $(entry.target).addClass("animated fadeOut slow");
+                    }
+                })
+            }, {
+                threshold: 0.1
+            });
 
             if (this.mobile) {
-                this.observer = new IntersectionObserver((entries) => {
+                this.videoObserver = new IntersectionObserver((entries) => {
                     console.log(entries);
                     let currentFirstEl = this.elementsInView[0];
                     entries.forEach(entry => {
@@ -107,12 +162,13 @@ $(() => {
                 .then(() => {
                     if (this.mobile) {
                         $(".coverContainer").each((index, element) => {
-                            this.observer.observe(element);
+                            this.videoObserver.observe(element);
                         })
                     } else {
                         let eles = $('.coverContainer');
                         $('.coverContainer').each((index, element) => {
                             // console.log(element);
+                            this.animationObserver.observe(element);
                             $(element).hover(() => $(element).addClass('enlarge'), () => $(element).removeClass('enlarge'))
                         })
                     }

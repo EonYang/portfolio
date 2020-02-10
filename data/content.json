@@ -1,6 +1,7 @@
 {
   "projects": [
     {
+      "id" : "1",
       "title": "Magical Pencil",
       "cover": {
         "image": "images/MagicalPencil-Cover.jpg",
@@ -14,6 +15,7 @@
       "tags": "Machine Learning, Storytelling"
     },
     {
+      "id" : "2",
       "title": "Simple Mirror",
       "cover": {
         "image": "images/simpleMirror-Cover.jpg",
@@ -27,6 +29,7 @@
       "tags": "Interactive Installation,"
     },
     {
+      "id" : "3",
       "title": "New Toy",
       "cover": {
         "image": "images/NIME-Cover.jpg",
@@ -39,6 +42,7 @@
       "category": "Instrument",
       "tags": "Led + Instrument"
     },{
+      "id" : "4",
       "title": "Oblivion",
       "cover": {
         "image": "images/Oblivion-Cover.jpg",
@@ -51,6 +55,7 @@
       "category": "Animation, Storytelling",
       "tags": "Fusion Film Festival, Best Animation Short winner."
     },{
+      "id" : "5",
       "title": "It's Time to Go to Time",
       "cover": {
         "image": "images/ittgtt-Cover.jpg",
@@ -63,6 +68,7 @@
       "category": "VR",
       "tags": "Beyond surprising, VR"
     },{
+      "id" : "6",
       "title": "The Machine of Boredom",
       "cover": {
         "image": "images/woodenHand-Cover.jpg",
@@ -75,6 +81,7 @@
       "category": "Interactive Installation, Creative Coding",
       "tags": "Attention Getting"
     },{
+      "id" : "7",
       "title": "Todd",
       "cover": {
         "image": "images/todd-Cover.jpg",
@@ -87,6 +94,7 @@
       "category": "Design",
       "tags": "Cute, Art Toy"
     },{
+      "id" : "8",
       "title": "Bully",
       "cover": {
         "image": "images/bully-Cover.jpg",
@@ -99,6 +107,7 @@
       "category": "Game",
       "tags": "A game imitating our world"
     },{
+      "id" : "9",
       "title": "Zen Dog",
       "cover": {
         "image": "images/zenDog-Cover.jpg",
@@ -111,6 +120,7 @@
       "category": "Game, Creative Coding",
       "tags": "Game about meditation"
     },{
+      "id" : "10",
       "title": "Which Pill",
       "cover": {
         "image": "images/whichPill-Cover.png",
@@ -123,6 +133,7 @@
       "category": "Game, Creative Coding",
       "tags": "Game about choices"
     },{
+      "id" : "11",
       "title": "P5.js Skethes",
       "cover": {
         "image": "images/p5-Cover.png",
@@ -135,6 +146,7 @@
       "category": "Creative Coding",
       "tags": "Game, P5js, Processing"
     },{
+      "id" : "12",
       "title": "Pre-ITP Projects",
       "cover": {
         "image": "images/behinders-Cover.jpg",
@@ -147,6 +159,7 @@
       "category": "Design",
       "tags": "App, SNS, Product design, and my past"
     },{
+      "id" : "13",
       "title": "ITP Spring Show Poster",
       "cover": {
         "image": "images/brainRoller-Cover.png",
@@ -161,6 +174,7 @@
     }
   ],
   "snippet": [{
+    "id" : "14",
     "title": "Finding Direction",
     "cover": {
       "image": "path",

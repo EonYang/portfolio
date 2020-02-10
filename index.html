@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
@@ -23,27 +24,29 @@
   <script src="js/vueApp.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.min.js"></script>
   <script src="js/sketch.js"></script>
+  <script src="js/logo.js"></script>
 
 </head>
 
 <body>
-  <!-- <div v-if="!mobile">
-    
-  </div> -->
   <div id="mySketchCanvas" style="pointer-events: none; z-index: 999;" class="d-block position-fixed w-100 h-100">
   </div>
   <a class="d-none" "href=" http://yangyang.blog/2019/02/my-portfolio-page/"> <div class="header">
     <img src="images/logo/logoBG.png" class="header" alt="A sketch">
     <div class="header position-absolute w-100 disapperWhenHover" style="top: 0px;">
-      <div class="title w-75 h2 h-autofont-weight-bold text-uppercase">
-        Yang's Portfolio</div>
+
     </div>
+    <div class="title h2 font-weight-bold text-uppercase">
+      Yang's Portfolio</div>
     </div>
   </a>
 
   <nav class="navbar bg-none navbar-dark navbar-expand-sm" id="header">
     <div class="container-fluid">
-      <a class="navbar-brand" href="http://yangyang.blog/portfolio/"><b>Yang's Projects</b></a>
+      <a class="navbar-brand d-flex" style="height: 80px;" href="http://yangyang.blog/portfolio/">
+        <div id="logoCanvas" class="d-inline-flex align-items-center" style="width: 80px; height: 80px;"></div>
+        <div class="d-inline-flex align-items-center" style="height: 80px;">Yang's Projects</div>
+      </a>
       <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#myToggleNav"
         aria-controls="myToggleNav" aria-label="Navigation Toggler">
         <span class="navbar-toggler-icon"></span>
@@ -55,7 +58,7 @@
           <a class="nav-item nav-link ml-auto" href="http://yangyang.blog/about/">About</a>
           <a class="nav-item nav-link ml-auto" href="http://yangyang.blog/contact/">Contact</a>
         </div>
-      </div>
+      </div> <!-- collapse -->
     </div>
   </nav>
 
@@ -92,8 +95,8 @@
       </div>
     </nav>
     <div class="row">
-      <div class="col-md-6 col-lg-4 " v-for="item in projects"
-        v-if="selected == 'All' || item.category.includes(selected)">
+      <div class="col-md-6 col-lg-4" v-for="item in projects"
+        v-if="selected2 == 'All' || item.category.includes(selected2)">
         <div class="coverContainer position-relative my-2 mx-auto" @click="openLink(item.link)">
           <video autoplay muted class="centerCrop position-absolute" style="top:0px;" :src="item.cover.animation"
             type="video/mp4" loop="loop" playsinline="true" autoplay></video>

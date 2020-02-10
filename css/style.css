@@ -24,6 +24,7 @@ img {
 .coverContainer {
     width: 100%;
     padding-top: 75%;
+    position: relative;
     -webkit-transition: all .6s ease-in-out;
 	-moz-transition: all .6s ease-in-out;
 	-o-transition: all .6s ease-in-out;

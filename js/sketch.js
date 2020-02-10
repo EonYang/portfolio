@@ -2,37 +2,26 @@
 
 let pts = [];
 let movingFast = false;
-let speedThreshold = 1;
+let speedThreshold = 5;
 let mouseLastPos;
 let speed;
 let canvas
+let frameByMilli = 0;
 
 function setup() {
-    // let isMobile = false;
-
-    // try {
-    //     document.createEvent("TouchEvent");
-    //     isMobile = true;
-    // } catch (e) {
-    //     console.log(e);
-    // }
-
-    // if(isMobile){
-    //     $(()=>{
-    //         $("#mySketchCanvas").remove();
-    //         noLoop();
-    //     })
-    // }
-
-
     frameRate(60);
     canvas = createCanvas(windowWidth, windowHeight);
+    // smooth();
     mouseLastPos = createVector(mouseX, mouseY);
     canvas.parent("mySketchCanvas");
     stroke(color(255, 255, 255, 100));
 }
 
 function draw() {
+    console.log(pts.length);
+    // console.log(millis()/1000);
+    // console.log(frameCount);
+    frameByMilli = floor(millis()/16);
     clear();
     speed = constrain(dist(mouseX, mouseY, mouseLastPos.x, mouseLastPos.y), 0, 90);
     if (speed >= speedThreshold) {
@@ -63,8 +52,6 @@ function draw() {
             pts.splice(i, 1);
         }
     }
-
-    
 }
 
 function windowResized() {
@@ -88,22 +75,22 @@ class Particle {
         this.yOffset = yOffset;
         this.dead;
         this.passedLife = 0;
+        this.bornFrame = frameByMilli;
     }
 
     update() {
         if (this.passedLife >= this.lifeSpan) {
             this.dead = true;
         } else {
-            this.passedLife++;
+            this.passedLife = frameByMilli - this.bornFrame;
         }
 
-        // this.alpha = float(this.lifeSpan - this.passedLife) / this.lifeSpan * 70 + 50;
         this.weight = float(this.lifeSpan - this.passedLife) / this.lifeSpan * this.weightRange;
 
         this.acc.set(0, 0);
 
-        let rn = (noise((this.loc.x + frameCount + this.xOffset) * 0.01, (this.loc.y + frameCount + this.yOffset) * 0.01) - 0.5) * 4 * PI;
-        let mag = noise((this.loc.y + frameCount) * 0.01, (this.loc.x + frameCount) * 0.01);
+        let rn = (noise((this.loc.x + frameByMilli + this.xOffset) * 0.01, (this.loc.y + frameByMilli + this.yOffset) * 0.01) - 0.5) * 4 * PI;
+        let mag = noise((this.loc.y + frameByMilli) * 0.01, (this.loc.x + frameByMilli) * 0.01);
         let dir = createVector(cos(rn), sin(rn));
         this.acc.add(dir);
         this.acc.mult(mag);
