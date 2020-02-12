@@ -19,7 +19,7 @@ var s = (sketch) => {
         sketch.strokeWeight(0.2);
     };
     sketch.draw = () => {
-
+        points = steps.length;
         noiseMax = sketch.sin(sketch.frameCount / 100) * 5;
         start += skip;
         start = start % steps.length;
@@ -30,7 +30,7 @@ var s = (sketch) => {
         let y = steps[start].y;
         let vertexes = [];
         a += 0.01;
-        sketch.background("#151c2202");
+        sketch.background("#151c2204");
         sketch.stroke(255);
         for (let ind = start; ind < start + points; ind++) {
             let i = ind % steps.length;
