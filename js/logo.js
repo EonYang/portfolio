@@ -21,12 +21,12 @@ var s = (sketch) => {
         sketch.noFill();
         sketch.ellipseMode(sketch.CENTER);
         steps = getAllSteps(d, stepLength, canvasWH, figureWH);
-        console.log(steps);
+        // console.log(steps);
         sketch.strokeWeight(0.2);
     };
     sketch.draw = () => {
         points = steps.length;
-        ellipse(mouseX, mouseY, mouseR, mouseR);
+        // ellipse(mouseX, mouseY, mouseR, mouseR);
 
         noiseMax = sketch.sin(sketch.frameCount / 100) * 5;
         start += skip;
@@ -83,13 +83,6 @@ var s = (sketch) => {
 
 var myp5 = new p5(s, 'logoCanvas');
 
-function getDistance(x1, y1, x2, y2) {
-    let a = x1 - x2;
-    let b = y1 - y2;
-
-    let c = Math.sqrt(a * a + b * b);
-    return c;
-}
 
 function getAllSteps(p, stepLength, scale = 1, fill = 1) {
     p = getNormalizedVertexes(p, scale, fill);
@@ -98,7 +91,7 @@ function getAllSteps(p, stepLength, scale = 1, fill = 1) {
     let r = [];
     for (let index = 0; index < p.length; index++) {
         const target = p[index];
-        let d = getDistance(x, y, target[0], target[1]);
+        let d = myp5.dist(x, y, target[0], target[1]);
         let steps = d / stepLength;
         let xIncre = (target[0] - x) / steps;
         let yIncre = (target[1] - y) / steps;
@@ -180,7 +173,7 @@ function getTarget(d, i) {
 
 function getOffset(mouseLoc, pointLoc, mouseR) {
     let pointOffset = {};
-    let d = getDistance(mouseLoc.x, mouseLoc.y, pointLoc.x, pointLoc.y);
+    let d = myp5.dist(mouseLoc.x, mouseLoc.y, pointLoc.x, pointLoc.y);
     let reciprocal = mouseR / d;
     reciprocal = reciprocal > 1 ? 1 : reciprocal;
     let p = Math.pow(reciprocal, 2);
