@@ -18,7 +18,7 @@ function setup() {
 }
 
 function draw() {
-    console.log(pts.length);
+    // console.log(pts.length);
     // console.log(millis()/1000);
     // console.log(frameCount);
     frameByMilli = floor(millis()/16);
@@ -37,7 +37,6 @@ function draw() {
     }
 
     if (mouseIsPressed & frameCount % 2 ===0) {
-        
         for (let i = 0; i < 10; i++) {
             let newP = new Particle(mouseX, mouseY, i + pts.length, i + pts.length);
             pts.push(newP);

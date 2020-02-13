@@ -4,28 +4,35 @@ let stepLength = 4;
 let noiseMax = 30;
 let start = 0;
 let steps = [];
+let stepsBackUp = [];
 let points = 20;
 let skip = 1;
 let size = 0.8;
+let mouseR = 10;
+let offsets = [];
+let canvasWH = 80;
+let figureWH = 0.8;
 
 var s = (sketch) => {
     sketch.setup = () => {
-        sketch.createCanvas(80, 80);
+        sketch.createCanvas(canvasWH, canvasWH);
         sketch.background("#151c22");
         sketch.smooth();
         sketch.noFill();
-        steps = getAllSteps(d, stepLength);
-        // console.log(steps.length);
+        sketch.ellipseMode(CENTER);
+        steps = getAllSteps(d, stepLength, canvasWH, figureWH);
+        console.log(steps);
         sketch.strokeWeight(0.2);
     };
     sketch.draw = () => {
         points = steps.length;
+        ellipse(mouseX, mouseY, mouseR, mouseR);
+
         noiseMax = sketch.sin(sketch.frameCount / 100) * 5;
         start += skip;
         start = start % steps.length;
         // console.log(start);
         // console.log(points);
-        sketch.translate(sketch.width * (1 - size) / 2, sketch.height * (1 - size) / 2);
         let x = steps[start].x;
         let y = steps[start].y;
         let vertexes = [];
@@ -33,6 +40,7 @@ var s = (sketch) => {
         sketch.background("#151c2204");
         sketch.stroke(255);
         for (let ind = start; ind < start + points; ind++) {
+            // get noise offset 
             let i = ind % steps.length;
 
             let xOff = sketch.map(sketch.cos(a + i), -1, 1, 0, noiseMax);
@@ -43,6 +51,20 @@ var s = (sketch) => {
             x = steps[i].x + xOff + n;
             y = steps[i].y + yOff + n;
 
+            // get offset caused by mouse position
+
+            offsets[i] = getOffset({
+                x: sketch.mouseX,
+                y: sketch.mouseY
+            }, {
+                x: x,
+                y: y
+            }, mouseR);
+
+            x += offsets[i].x;
+            y += offsets[i].y;
+
+            // sketch.point(steps[i].x, steps[i].y);
             vertexes.push({
                 x: x,
                 y: y
@@ -51,26 +73,26 @@ var s = (sketch) => {
         sketch.beginShape();
         for (let index = 0; index < vertexes.length; index++) {
             const e = vertexes[index];
-            sketch.curveVertex(e.x * sketch.width * size / 100, e.y * sketch.width * size / 100);
+            sketch.curveVertex(e.x, e.y);
+            // sketch.point(e.x,e.y);
         }
         sketch.endShape();
         d = vertexes;
-
     }
 }
 
 var myp5 = new p5(s, 'logoCanvas');
 
-function getDistance(x1, y1, x2, y2){
+function getDistance(x1, y1, x2, y2) {
     let a = x1 - x2;
     let b = y1 - y2;
 
-    let c = Math.sqrt( a*a + b*b );
+    let c = Math.sqrt(a * a + b * b);
     return c;
 }
 
-function getAllSteps(p, stepLength) {
-    p = getNormalizedVertexes(p, 100);
+function getAllSteps(p, stepLength, scale = 1, fill = 1) {
+    p = getNormalizedVertexes(p, scale, fill);
     let x = p[0][0];
     let y = p[0][1];
     let r = [];
@@ -97,7 +119,7 @@ function getAllSteps(p, stepLength) {
 
 }
 
-function getNormalizedVertexes(p, scale = 1) {
+function getNormalizedVertexes(p, scale = 1, fill = 1) {
     let d = p.split(" ");
     let xMin = getTarget(d, 0)[0];
     let xMax = xMin;
@@ -118,8 +140,8 @@ function getNormalizedVertexes(p, scale = 1) {
     let yS = xS > yMax - yMin ? xS : yMax - yMin
     xS = xS > yS ? xS : yS;
     r.forEach((val, ind) => {
-        r[ind][0] = (val[0] - xMin) * scale / xS;
-        r[ind][1] = (val[1] - yMin) * scale / yS;
+        r[ind][0] = (val[0] - xMin) * scale * fill / xS + (1 - fill) * scale / 2;
+        r[ind][1] = (val[1] - yMin) * scale * fill / yS + (1 - fill) * scale / 2;
     })
     // console.log(r);
     // console.log(`min: ${min}, max: ${max}`);
@@ -154,4 +176,19 @@ function getTarget(d, i) {
             return t;
             break;
     }
+}
+
+function getOffset(mouseLoc, pointLoc, mouseR) {
+    let pointOffset = {};
+    let d = getDistance(mouseLoc.x, mouseLoc.y, pointLoc.x, pointLoc.y);
+    let reciprocal = mouseR / d;
+    reciprocal = reciprocal > 1 ? 1 : reciprocal;
+    let p = Math.pow(reciprocal, 2);
+    let x = (mouseLoc.x - pointLoc.x) * p;
+    let y = (mouseLoc.y - pointLoc.y) * p;
+    pointOffset = {
+        x: x,
+        y: y
+    };
+    return pointOffset
 }
