@@ -19,7 +19,7 @@ var s = (sketch) => {
         sketch.background("#151c22");
         sketch.smooth();
         sketch.noFill();
-        sketch.ellipseMode(CENTER);
+        sketch.ellipseMode(sketch.CENTER);
         steps = getAllSteps(d, stepLength, canvasWH, figureWH);
         console.log(steps);
         sketch.strokeWeight(0.2);
