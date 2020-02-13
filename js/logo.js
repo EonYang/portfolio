@@ -13,9 +13,13 @@ let offsets = [];
 let canvasWH = 80;
 let figureWH = 0.8;
 
+
 var s = (sketch) => {
     sketch.setup = () => {
         sketch.createCanvas(canvasWH, canvasWH);
+        if (noiseMax == undefined) noiseMax = canvasWH * figureWH * 0.2;
+        if (stepLength == undefined) stepLength = noiseMax / 6;
+        if (mouseR == undefined) mouseR = noiseMax / 2;
         sketch.background("#151c22");
         sketch.smooth();
         sketch.noFill();
@@ -131,12 +135,26 @@ function getNormalizedVertexes(p, scale = 1, fill = 1) {
     });
     let xS = xMax - xMin;
     let yS = xS > yMax - yMin ? xS : yMax - yMin
-    xS = xS > yS ? xS : yS;
+    let diff = xS - yS;
+    let longSide = xS > yS ? xS : yS;
     r.forEach((val, ind) => {
-        r[ind][0] = (val[0] - xMin) * scale * fill / xS + (1 - fill) * scale / 2;
-        r[ind][1] = (val[1] - yMin) * scale * fill / yS + (1 - fill) * scale / 2;
+        r[ind][0] = (val[0] - xMin) / longSide;
+        r[ind][1] = (val[1] - yMin) / longSide;
+        if (diff < 0) {
+            r[ind][0] -= (diff / 2)/longSide;
+        } else if (diff > 0) {
+            r[ind][1] += (diff / 2)/longSide;
+        }
+    });
+    if (scale == 1 && fill == 1) {
+        return r
+    }
+    r.forEach((val, ind) => {
+        let offset = scale * (1 -fill)/2;
+        r[ind][0] = val[0] * scale * fill + offset;
+        r[ind][1] = val[1] * scale * fill + offset;
     })
-    // console.log(r);
+    console.log(r[0][0]);
     // console.log(`min: ${min}, max: ${max}`);
     return r;
 }
