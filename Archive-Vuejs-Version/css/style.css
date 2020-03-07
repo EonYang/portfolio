@@ -1,0 +1,118 @@
+body {
+    /* cursor: pointer;
+    font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+    margin: 0px;
+    width: 100%; */
+    background-color: #151c22 !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #ffffff12 !important;
+}
+
+#header {
+    min-height: 120px;
+}
+
+img {
+    opacity: 1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.coverContainer {
+    width: 100%;
+    padding-top: 75%;
+    position: relative;
+    -webkit-transition: all .6s ease-in-out;
+	-moz-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	-ms-transition: all .6s ease-in-out;
+}
+.coverContainer video{
+    width: 99%;
+    height: 99%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0.5%);
+}
+
+.centerCrop {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.header img{
+    mix-blend-mode: lighten;
+}
+
+.header {
+    opacity: 1;
+    width: 100%;
+    height: 150px;
+    display: block;
+    background-color: #151c22 !important;
+}
+
+.banner100 {
+    width: 100vw;
+    height: 30vw;
+    line-height: 30vw;
+}
+
+.banner50 {
+    width: 100vw;
+    height: 20vw;
+    line-height: 20vw;
+}
+
+
+.darkOverlay {
+    background-color: #151c22 !important;
+    position: absolute;
+    top: 0px;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.disapperWhenHover {
+    cursor: pointer;
+    opacity: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.disapperWhenHover:hover {
+    opacity: 0;
+}
+
+.enlarge {
+    -webkit-transform: scale(1.04); 
+    -moz-transform: scale(1.04);
+    -o-transform: scale(1.04);
+    transform: scale(1.04);
+}
+#content {
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+}
