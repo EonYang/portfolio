@@ -5,9 +5,7 @@ import {
   BrowserRouter as Router,
   Route, Switch
 } from 'react-router-dom';
-// import AboutPage from '../pages/AboutPage';
 import NavBar from './NavBar';
-import NotFoundPage from "../pages/NotFoundPage";
 
 class App extends Component {
   render() {
@@ -15,14 +13,11 @@ class App extends Component {
       <Router >
         <div className="App" >
           <NavBar />
-          <div id="page-body" >
             <Switch>
               <Route path='/' component={HomePage} exact />
-              {/* <Route path='/about' component={AboutPage} /> */}
-              <Route component={NotFoundPage} />
+              <Route path='/portfolio' component={HomePage} exact />
             </Switch>
           </div>
-        </div>
       </Router>
     )
   }
