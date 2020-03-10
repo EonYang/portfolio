@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import './App.css';
-import HomePage from '../pages/HomePage';
+import PortfolioPage from '../pages/PortfolioPage';
 import {
   BrowserRouter as Router,
   Route, Switch
@@ -11,13 +11,11 @@ class App extends Component {
   render() {
     return (
       <Router >
-        <div className="App" >
           <NavBar />
-            <Switch>
-              <Route path='/' component={HomePage} exact />
-              <Route path='/portfolio' component={HomePage} exact />
-            </Switch>
-          </div>
+          <Switch>
+            <Route path='/' component={PortfolioPage} exact />
+            <Route path='/portfolio' component={PortfolioPage} exact />
+          </Switch>
       </Router>
     )
   }

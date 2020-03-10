@@ -15,6 +15,20 @@
       "tags": "Machine Learning, Storytelling"
     },
     {
+      "id" : "15",
+      "title": "Thesis Archive in WebVR",
+      "cover": {
+        "image": "images/ThesisArchivePrototype-Cover.jpg",
+        "animationFormat": "video",
+        "animation": "images/videos/ThesisArchivePrototype-Cover-Video.mp4"
+      },
+      "link": "http://yangyang.blog/2020/03/reactjs-webvr-3d-portfolio/",
+      "time": "March, 2020",
+      "teaser": "An protorype, made of WebVR",
+      "category": "Front-end, VR",
+      "tags": "ReactJS, VR"
+    },
+    {
       "id" : "2",
       "title": "Simple Mirror",
       "cover": {
@@ -123,7 +137,7 @@
       "id" : "10",
       "title": "Which Pill",
       "cover": {
-        "image": "images/whichPill-Cover.png",
+        "image": "images/whichPill-Cover.jpg",
         "animationFormat": "video",
         "animation": "images/videos/whichPill-Cover-Video.mp4"
       },
@@ -136,7 +150,7 @@
       "id" : "11",
       "title": "P5.js Skethes",
       "cover": {
-        "image": "images/p5-Cover.png",
+        "image": "images/p5-Cover.jpg",
         "animationFormat": "video",
         "animation": "images/videos/p5-Cover-Video.mp4"
       },
@@ -162,7 +176,7 @@
       "id" : "13",
       "title": "ITP Spring Show Poster",
       "cover": {
-        "image": "images/brainRoller-Cover.png",
+        "image": "images/brainRoller-Cover.jpg",
         "animationFormat": "video",
         "animation": "images/videos/brainRoller-Cover-Video.mp4"
       },
