@@ -5,16 +5,17 @@ import {
   BrowserRouter as Router,
   Route, Switch
 } from 'react-router-dom';
-import NavBar from './NavBar';
+
+import AboutPage from '../pages/AboutPage';
 
 class App extends Component {
   render() {
     return (
       <Router >
-          <NavBar />
           <Switch>
             <Route path='/' component={PortfolioPage} exact />
             <Route path='/portfolio' component={PortfolioPage} exact />
+            <Route path='/about' component={AboutPage} exact />
           </Switch>
       </Router>
     )

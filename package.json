@@ -2,8 +2,7 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "description": "A simple webpage displaying my recent works",
-  "main": "app.js",
-  "homepage": "/portfolio",
+  "main": "index.jsx",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -31,13 +30,18 @@
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
+    "node-sass": "^4.13.1",
     "popper.js": "^1.16.1",
     "react": "^16.13.0",
+    "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.0",
     "react-icons": "^3.9.0",
+    "react-markdown": "^4.3.1",
     "react-moment": "^0.9.7",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.0",
+    "react-spring": "^9.0.0-canary.808.17.55c5691",
+    "react-useanimations": "^1.2.13",
     "whatwg-fetch": "^3.0.0"
   },
   "browserslist": {
@@ -51,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "resize-observer-polyfill": "^1.5.1"
   }
 }

@@ -1,10 +1,36 @@
 import React from 'react';
+import { Nav, Navbar } from 'react-bootstrap';
 
 const ProjectsFilter = ({ categories, setSelected, selected }) => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-md navbar-dark">
+            <Navbar expand="md" bg="white" collapseOnSelect={true}>
+                <Navbar.Toggle >
+                    <small>{selected}</small>
+                </Navbar.Toggle>
+                <Navbar.Collapse >
+                    <Nav className="justify-content-center" as="ul"
+                        onSelect={(eventKey) => setSelected(eventKey)}
+                    >
+                        {categories.map((cat, key) => (
+                            <Nav.Item key={key}>
+                                <Nav.Link eventKey={cat}>
+                                    <small className="ml-4">{cat}</small>
+                                </Nav.Link>
+                            </Nav.Item>
+                        ))}
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+
+        </>
+    )
+}
+
+export default ProjectsFilter;
+
+{/* <nav className="navbar navbar-expand-md navbar-dark">
                 <div className="btn-group">
                     <button className="btn navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#myFilter"
                         aria-controls="myFilter" aria-label="My filter toggler">
@@ -20,7 +46,7 @@ const ProjectsFilter = ({ categories, setSelected, selected }) => {
                     <ul className="navbar-nav nav-pills d-block d-md-none">
                         {categories.map((cat, key) => (
                             <li className="nav-item" key={key}>
-                                <a href="#" className={`nav-link ${cat === selected ? "active" : ""}`} title={cat} onClick={e => setSelected(e.currentTarget.getAttribute('title'))}
+                                <a href="/#" className={`nav-link ${cat === selected ? "active" : ""}`} title={cat} onClick={e => setSelected(e.currentTarget.getAttribute('title'))}
                                     data-toggle="collapse" data-target="#myFilter">
                                     <small className="ml-4">{cat}</small></a>
                             </li>
@@ -31,16 +57,10 @@ const ProjectsFilter = ({ categories, setSelected, selected }) => {
                     <div className="row navbar-nav nav-pills">
                         {categories.map((cat, key) => (
                             <div className="nav-item" key={key}>
-                                <a href="#" className="nav-link mx-auto" title={cat} onClick={e => setSelected(e.currentTarget.getAttribute('title'))}>
+                                <a href="/#" className="nav-link mx-auto" title={cat} onClick={e => setSelected(e.currentTarget.getAttribute('title'))}>
                                     <small>{cat}</small></a>
                             </div>
                         ))}
-
                     </div>
                 </div>
-            </nav>
-        </>
-    )
-}
-
-export default ProjectsFilter;
+            </nav> */}

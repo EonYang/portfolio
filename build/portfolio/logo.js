@@ -87,7 +87,6 @@ var s = (sketch) => {
 
 var myp5 = new p5(s, 'logoCanvas');
 
-
 function getAllSteps(p, stepLength, scale = 1, fill = 1) {
     p = getNormalizedVertexes(p, scale, fill);
     let x = p[0][0];

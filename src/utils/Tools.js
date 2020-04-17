@@ -2,18 +2,23 @@ import $ from "jquery";
 
 class Tools {
 
-    constructor(){
+    constructor() {
         this.elementsInView = []
     }
 
     extractCategories(projects) {
-        let categories = [];
+        let categories = new Map();
         projects.forEach(project => {
             project.category.split(",").forEach(category => {
-                if (categories.indexOf(category.trim()) < 0) categories.push(category.trim());
+                category = category.trim();
+                if (categories.has(category)) {
+                    categories.get(category).count++;
+                } else {
+                    categories.set(category, { count: 1, category: category });
+                }
             })
         })
-        return categories;
+        return [...categories.values()].sort((a, b) => b.count - a.count);
     }
 
     testIfMobile() {
@@ -64,7 +69,7 @@ class Tools {
                         }
                     }
                 });
-                if (this.elementsInView[0] != undefined && this.elementsInView[0] != currentFirstEl) {
+                if (this.elementsInView[0] !== undefined && this.elementsInView[0] !== currentFirstEl) {
                     //currentFirstEl is undefined when first initiated.
                     try {
                         this.playVideo(currentFirstEl, false)
