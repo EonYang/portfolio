@@ -4,6 +4,7 @@
     z-index: 999999;
 
 }
+
 .nav-container {
     z-index: 999998;
     right: 0;
@@ -19,10 +20,11 @@
     background-color: white;
 }
 
-.nav-item {
+.my-nav-item {
     left: 0vw;
     width: 100%;
     text-align: center;
+
     h1 {
         font-size: 15vh;
         line-height: 20vh;

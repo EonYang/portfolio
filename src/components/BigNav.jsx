@@ -77,7 +77,7 @@ const BigNav = ({ right, top }) => {
                     </animated.div>
                 ))}
                 {navItemsTransition(({ y, ...style }, item) => (
-                    <animated.div key={item.name} className="position-absolute nav-item"
+                    <animated.div key={item.name} className="position-absolute my-nav-item"
                         style={{
                             ...style,
                             top: `${item.id * 20 + 20}vh`,

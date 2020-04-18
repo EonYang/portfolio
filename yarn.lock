@@ -9310,7 +9310,7 @@ react-transition-group@^4.0.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react-useanimations@^1.2.13:
+react-useanimations@^1.1.6:
   version "1.2.13"
   resolved "https://registry.yarnpkg.com/react-useanimations/-/react-useanimations-1.2.13.tgz#d356bf66581c35cc48f82f613ed7d6dd0f7f5db6"
   integrity sha512-q6TajpqmWQ2loDne2W0Z5RGG1GI48g8ahyV/PEWmRTdk8qFW+7kzZcFeqiAfSHI6zj+4lb3vO6vBC8684b6png==
