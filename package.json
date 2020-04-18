@@ -1,5 +1,6 @@
 {
   "name": "my-portfolio",
+  "homepage": "portfolio",
   "version": "1.0.0",
   "description": "A simple webpage displaying my recent works",
   "main": "index.jsx",
@@ -25,6 +26,7 @@
     "url": "https://github.com/EonYang/portfolio/issues"
   },
   "dependencies": {
+    "@babel/compat-data": "7.8.0",
     "animate.css": "^3.7.2",
     "bootstrap": "^4.4.1",
     "husky": "^4.2.5",
