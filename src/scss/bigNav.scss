@@ -8,10 +8,12 @@
   .my-navbar-brand {
     display: flex;
     align-items: center;
+
     h1 {
       line-height: 80px;
     }
   }
+
   #nav-toggle-btn {
     z-index: 999999;
     margin-left: auto;
@@ -30,6 +32,7 @@
     opacity: 0.95;
     height: 12.5vh;
     background-color: white;
+    pointer-events: all;
   }
 
   .my-nav-item {

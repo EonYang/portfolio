@@ -152,7 +152,6 @@ export const s = (sketch) => {
       r[ind][0] = val[0] * scale * fill + offset;
       r[ind][1] = val[1] * scale * fill + offset;
     });
-    console.log(r[0][0]);
     // console.log(`min: ${min}, max: ${max}`);
     return r;
   }

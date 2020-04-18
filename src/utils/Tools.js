@@ -13,22 +13,14 @@ class Tools {
         if (categories.has(category)) {
           categories.get(category).count++;
         } else {
-          categories.set(category, { count: 1, category: category });
+          categories.set(category, {
+            count: 1,
+            category: category,
+          });
         }
       });
     });
     return [...categories.values()].sort((a, b) => b.count - a.count);
-  }
-
-  testIfMobile() {
-    try {
-      document.createEvent("TouchEvent");
-      console.log("Created a TouchEvent, this is a mobile.");
-      return true;
-    } catch (e) {
-      console.log("Can't create TouchEvent, not a mobile.");
-    }
-    return false;
   }
 
   openLink(link) {
@@ -93,3 +85,14 @@ class Tools {
 }
 
 export default new Tools();
+
+export const testIfMobile = () => {
+  try {
+    document.createEvent("TouchEvent");
+    console.log("This is a mobile.");
+    return true;
+  } catch (e) {
+    console.log("Not a mobile.");
+  }
+  return false;
+};

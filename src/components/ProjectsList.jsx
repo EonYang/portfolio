@@ -6,7 +6,7 @@ import { useMedia } from "../utils/CustomHooks";
 import Tools from "../utils/Tools";
 import { animated, useTransition, to } from "react-spring";
 
-const ProjectsList = ({ projects }) => {
+const ProjectsList = ({ projects, isMobile }) => {
   const { columns, windowWidth } = useMedia(
     ["(min-width: 1500px)", "(min-width: 1000px)", "(min-width: 600px)"],
     [4, 3, 2],
@@ -15,14 +15,13 @@ const ProjectsList = ({ projects }) => {
   const categories = ["All"].concat(
     Tools.extractCategories(projects).map((item) => item.category)
   );
-  const isMobile = Tools.testIfMobile();
+
   // let videoObserver = Tools.createIntersectionObserver(isMobile);
   const [selected, setSelected] = useState("All");
   const [filteredProjects, setProjects] = useState(projects);
 
   let heights = new Array(columns).fill(0);
   const cardWidth = windowWidth / columns;
-  console.log("card width: ", cardWidth);
   const cardHeight = cardWidth * 0.7;
 
   let gridItems = filteredProjects.map((project, i) => {
@@ -30,9 +29,7 @@ const ProjectsList = ({ projects }) => {
     const xy = [cardWidth * col, (heights[col] += cardHeight) - cardHeight];
     return { ...project, xy, width: cardWidth, height: cardHeight };
   });
-  console.log(gridItems);
   useEffect(() => {
-    console.log(selected);
     if (selected === "All") setProjects(projects);
     else
       setProjects(
@@ -90,7 +87,6 @@ const ProjectsList = ({ projects }) => {
         }}
       >
         {transition(({ life, xy, ...style }, item, index) => {
-          console.log(life.get());
           return life.get() <= 0.1 ? null : (
             <animated.div
               className="coverContainer"
