@@ -8,11 +8,10 @@ import AboutPage from "../pages/AboutPage";
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/portfolio">
         <Switch>
-          <Route path="/" component={PortfolioPage} exact />
-          <Route path="/portfolio" component={PortfolioPage} exact />
           <Route path="/about" component={AboutPage} exact />
+          <Route path="/" component={PortfolioPage} exact />
         </Switch>
       </Router>
     );
