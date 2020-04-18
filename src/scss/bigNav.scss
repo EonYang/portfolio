@@ -1,34 +1,46 @@
-#nav-toggle-btn {
-    position: absolute;
-    transform: translate(50%, -50%);
-    z-index: 999999;
+#my-navbar {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  padding-top: 32px;
+  background-color: white;
 
+  .my-navbar-brand {
+    display: flex;
+    align-items: center;
+    h1 {
+      line-height: 80px;
+    }
+  }
+  #nav-toggle-btn {
+    z-index: 999999;
+    margin-left: auto;
+  }
 }
 
 .nav-container {
-    z-index: 999998;
-    right: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-}
+  z-index: 99999;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
 
-.nav-bg-tile {
+  .nav-bg-tile {
     right: 0;
     opacity: 0.95;
     height: 12.5vh;
     background-color: white;
-}
+  }
 
-.my-nav-item {
+  .my-nav-item {
     left: 0vw;
     width: 100%;
     text-align: center;
 
     h1 {
-        font-size: 15vh;
-        line-height: 20vh;
-        color: black;
+      font-size: 15vh;
+      line-height: 20vh;
+      color: black;
     }
-
+  }
 }
