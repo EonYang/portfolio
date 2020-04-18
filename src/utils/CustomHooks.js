@@ -3,7 +3,6 @@ import {
   useState,
   useEffect,
 } from "react";
-import ResizeObserver from "resize-observer-polyfill";
 
 export function useMedia(queries, values, defaultValue) {
   const match = () =>
@@ -17,7 +16,7 @@ export function useMedia(queries, values, defaultValue) {
     };
     window.addEventListener("resize", handler);
     return () => window.removeEventListener("resize", handler);
-  }, []);
+  });
   return {
     columns,
     windowWidth,

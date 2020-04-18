@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectsList from "../components/ProjectsList";
 import data from "../data/content.js";
-import { Container } from "react-bootstrap";
 import Header from "../components/Header";
 
 const PortfolioPage = () => {

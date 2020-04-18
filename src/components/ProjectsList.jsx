@@ -4,7 +4,7 @@ import ProjectsFilter from "./ProjectsFilter";
 import { useMedia } from "../utils/CustomHooks";
 
 import Tools from "../utils/Tools";
-import { config, animated, useTransition, to } from "react-spring";
+import { animated, useTransition, to } from "react-spring";
 
 const ProjectsList = ({ projects }) => {
   const { columns, windowWidth } = useMedia(
@@ -16,7 +16,7 @@ const ProjectsList = ({ projects }) => {
     Tools.extractCategories(projects).map((item) => item.category)
   );
   const isMobile = Tools.testIfMobile();
-  let videoObserver = Tools.createIntersectionObserver(isMobile);
+  // let videoObserver = Tools.createIntersectionObserver(isMobile);
   const [selected, setSelected] = useState("All");
   const [filteredProjects, setProjects] = useState(projects);
 
@@ -38,8 +38,7 @@ const ProjectsList = ({ projects }) => {
       setProjects(
         projects.filter((project) => project.category.includes(selected))
       );
-    console.log(filteredProjects);
-  }, [selected]);
+  }, [selected, projects]);
 
   // useEffect(() => {
   //     if (isMobile) {

@@ -20,6 +20,7 @@ const BigNav = ({ right, top, collapse }) => {
       next({ width: "0vw" });
     },
     trail: 50,
+    config: springConfig,
   });
 
   const [navItems, setNavItems] = useState([]);
@@ -35,6 +36,7 @@ const BigNav = ({ right, top, collapse }) => {
       next({ height: "0vw", y: 100, opacity: 0 });
     },
     trail: 50,
+    config: springConfig,
   });
 
   useEffect(() => {
