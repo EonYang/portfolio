@@ -1,6 +1,7 @@
+//@ts-nocheck
 import React from "react";
 import ProjectsList from "../components/ProjectsList";
-import data from "../data/content.js";
+import data from "../data/content";
 import Header from "../components/Header";
 
 const PortfolioPage = ({ isMobile }) => {

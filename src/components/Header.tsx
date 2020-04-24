@@ -1,18 +1,19 @@
+//@ts-nocheck
 import React, { useState, useRef, useEffect } from "react";
 import { Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import BigNav from "./BigNav";
 import AnimatedIcon from "react-useanimations";
-import { myp5 } from "./logo";
+// import { myp5 } from "../../public/logo";
 
 const Header = () => {
   const [collapse, setCollapse] = useState(true);
   const toggle = () => setCollapse((prev) => !prev);
   const logoRef = useRef(null);
 
-  useEffect(() => {
-    if (myp5.canvas !== undefined) logoRef.current.append(myp5.canvas);
-  }, [collapse]);
+  // useEffect(() => {
+  //   if (myp5.canvas !== undefined) logoRef.current.append(myp5.canvas);
+  // }, [collapse]);
 
   return (
     <>

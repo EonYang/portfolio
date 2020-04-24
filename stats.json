@@ -1,0 +1,322 @@
+{
+  "errors": [
+    "./src/index.jsx 14:20\nModule parse failed: Unexpected token (14:20)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n| \n| const renderApp = () => {\n>     ReactDOM.render(<App />, document.getElementById(\"root\"));\n| }\n| export default renderApp;\n @ ./src/index.js 1:0-36 3:0-9"
+  ],
+  "warnings": [
+    "configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/"
+  ],
+  "version": "4.42.0",
+  "hash": "912533793cad2aca5a61",
+  "time": 165,
+  "builtAt": 1587362319472,
+  "publicPath": "",
+  "outputPath": "/Users/YANG/dev/dev/myGithub/portfolio/dist",
+  "assetsByChunkName": {
+    "main": "main.js"
+  },
+  "assets": [
+    {
+      "name": "main.js",
+      "size": 1350,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "main": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "main.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "main": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "main.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 414,
+      "names": [
+        "main"
+      ],
+      "files": [
+        "main.js"
+      ],
+      "hash": "2269428f167f1c1bc918",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/YANG/dev/dev/myGithub/portfolio/src/index.jsx",
+          "name": "./src/index.jsx",
+          "index": 1,
+          "index2": 0,
+          "size": 364,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/Users/YANG/dev/dev/myGithub/portfolio/src/index.js",
+          "issuerId": 1,
+          "issuerName": "./src/index.js",
+          "issuerPath": [
+            {
+              "id": 1,
+              "identifier": "/Users/YANG/dev/dev/myGithub/portfolio/src/index.js",
+              "name": "./src/index.js",
+              "profile": {
+                "factory": 15,
+                "building": 6
+              }
+            }
+          ],
+          "profile": {
+            "factory": 1,
+            "building": 2
+          },
+          "failed": true,
+          "errors": 1,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/YANG/dev/dev/myGithub/portfolio/src/index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./index.jsx",
+              "loc": "1:0-36"
+            },
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/YANG/dev/dev/myGithub/portfolio/src/index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "./index.jsx",
+              "loc": "3:0-9"
+            }
+          ],
+          "usedExports": [
+            "default"
+          ],
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1,
+          "source": "throw new Error(\"Module parse failed: Unexpected token (14:20)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n| \\n| const renderApp = () => {\\n>     ReactDOM.render(<App />, document.getElementById(\\\"root\\\"));\\n| }\\n| export default renderApp;\");"
+        },
+        {
+          "id": 1,
+          "identifier": "/Users/YANG/dev/dev/myGithub/portfolio/src/index.js",
+          "name": "./src/index.js",
+          "index": 0,
+          "index2": 1,
+          "size": 50,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 15,
+            "building": 6
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "./src",
+              "loc": "main"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [],
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is an entry point"
+          ],
+          "depth": 0,
+          "source": "import renderApp from \"./index.jsx\";\n\nrenderApp();"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "main",
+          "request": "./src",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "/Users/YANG/dev/dev/myGithub/portfolio/src/index.jsx",
+      "name": "./src/index.jsx",
+      "index": 1,
+      "index2": 0,
+      "size": 364,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "/Users/YANG/dev/dev/myGithub/portfolio/src/index.js",
+      "issuerId": 1,
+      "issuerName": "./src/index.js",
+      "issuerPath": [
+        {
+          "id": 1,
+          "identifier": "/Users/YANG/dev/dev/myGithub/portfolio/src/index.js",
+          "name": "./src/index.js",
+          "profile": {
+            "factory": 15,
+            "building": 6
+          }
+        }
+      ],
+      "profile": {
+        "factory": 1,
+        "building": 2
+      },
+      "failed": true,
+      "errors": 1,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "/Users/YANG/dev/dev/myGithub/portfolio/src/index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "./index.jsx",
+          "loc": "1:0-36"
+        },
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "/Users/YANG/dev/dev/myGithub/portfolio/src/index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "./index.jsx",
+          "loc": "3:0-9"
+        }
+      ],
+      "usedExports": [
+        "default"
+      ],
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 1,
+      "source": "throw new Error(\"Module parse failed: Unexpected token (14:20)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n| \\n| const renderApp = () => {\\n>     ReactDOM.render(<App />, document.getElementById(\\\"root\\\"));\\n| }\\n| export default renderApp;\");"
+    },
+    {
+      "id": 1,
+      "identifier": "/Users/YANG/dev/dev/myGithub/portfolio/src/index.js",
+      "name": "./src/index.js",
+      "index": 0,
+      "index2": 1,
+      "size": 50,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "profile": {
+        "factory": 15,
+        "building": 6
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "./src",
+          "loc": "main"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": [],
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is an entry point"
+      ],
+      "depth": 0,
+      "source": "import renderApp from \"./index.jsx\";\n\nrenderApp();"
+    }
+  ],
+  "filteredModules": 0,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 2,
+      "debug": false
+    }
+  },
+  "children": []
+}

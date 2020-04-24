@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React from "react";
 import PortfolioPage from "../pages/PortfolioPage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";

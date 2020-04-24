@@ -1,3 +1,4 @@
+//@ts-nocheck
 import $ from "jquery";
 
 class Tools {
@@ -8,8 +9,7 @@ class Tools {
   extractCategories(projects) {
     let categories = new Map();
     projects.forEach((project) => {
-      project.category.split(",").forEach((category) => {
-        category = category.trim();
+      project.category.forEach((category) => {
         if (categories.has(category)) {
           categories.get(category).count++;
         } else {

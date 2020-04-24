@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React, { useState, useEffect } from "react";
 import { config, animated, to, useTransition } from "react-spring";
 import { Link } from "react-router-dom";

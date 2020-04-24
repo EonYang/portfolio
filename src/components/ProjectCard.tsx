@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React, { useCallback, useRef } from "react";
 import Tools from "../utils/Tools";
 
@@ -5,11 +6,26 @@ const ProjectCard = ({ project, isMobile, width, height }) => {
   const videoRef = useRef(null);
 
   const onMouseEnterPlayVideo = useCallback(() => {
-    videoRef.current.play();
+    const isPlaying =
+      videoRef.current.currentTime > 0 &&
+      !videoRef.current.paused &&
+      !videoRef.current.ended &&
+      videoRef.current.readyState > 2;
+
+    if (!isPlaying) {
+      videoRef.current.play();
+    }
   }, []);
 
   const onMouseLeaveStopVideo = useCallback(() => {
-    videoRef.current.pause();
+    const isPlaying =
+      videoRef.current.currentTime > 0 &&
+      !videoRef.current.paused &&
+      !videoRef.current.ended &&
+      videoRef.current.readyState > 2;
+    if (isPlaying) {
+      videoRef.current.pause();
+    }
   }, []);
 
   if (!project) {

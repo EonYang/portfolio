@@ -1,3 +1,4 @@
+//@ts-nocheck
 const converter = (input, outputUnit) => {
   if (typeof input === "string" && typeof input === "numer") return -1;
   // input number is considered px
