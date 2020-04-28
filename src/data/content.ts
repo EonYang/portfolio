@@ -1,4 +1,4 @@
-import { IData, AnimationFormat, IProject } from "../types";
+import { IData, AnimationFormat } from "../types";
 
 const Cate = {
   frontEnd: "Front-end",
@@ -32,7 +32,7 @@ const Tag = {
 const data: IData = {
   projects: [
     {
-      priority: 1,
+      priority: 60,
       title: "Magical Pencil",
       cover: {
         image: "images/MagicalPencil-Cover.jpg",
@@ -89,11 +89,11 @@ const data: IData = {
       time: "Dec, 2018",
       teaser:
         "What instrument can serve as a expressive role in this era's live digital music performence.",
-      category: [Cate.other, Cate.creativeTech],
+      category: [Cate.creativeTech],
       tags: [Tag.arduino],
     },
     {
-      priority: 4,
+      priority: 40,
       title: "Oblivion",
       cover: {
         image: "images/Oblivion-Cover.jpg",
@@ -169,7 +169,7 @@ const data: IData = {
       tags: [Tag.game, Tag.nodeJs],
     },
     {
-      priority: 9,
+      priority: 30,
       title: "Zen Dog",
       cover: {
         image: "images/zenDog-Cover.jpg",
@@ -183,7 +183,7 @@ const data: IData = {
       tags: [Tag.game, Tag.nodeJs],
     },
     {
-      priority: 10,
+      priority: 40,
       title: "Which Pill",
       cover: {
         image: "images/whichPill-Cover.jpg",
@@ -244,24 +244,37 @@ const data: IData = {
       category: [Cate.deisgnAndAnimation],
       tags: [Tag.design, Tag.animation, Tag.graphic],
     },
+    {
+      priority: 100,
+      title: "ITP Thesis Archive 2020",
+      cover: {
+        image: "images/Thesis-Archive-Cover.jpg",
+        animationFormat: AnimationFormat.video,
+        animation: "images/videos/Thesis-Archive-Video.mp4",
+      },
+      link: new URL(
+        "http://yangyang.blog/articles/2020/04/thesis-archive-2020/"
+      ),
+      time: "Apr, 2020",
+      teaser: "A gallery full of suprises.",
+      category: [Cate.frontEnd],
+      tags: [Tag.react, Tag.nodeJs, Tag.ts],
+    },
+    {
+      priority: 80,
+      title: "COVID-19-Ticker",
+      cover: {
+        image: "images/Covid-Ticker-Cover.jpg",
+        animationFormat: AnimationFormat.video,
+        animation: "images/videos/Covid-Ticker-Video.mp4",
+      },
+      link: new URL("http://yangyang.blog/articles/2020/04/covid-19-ticker/"),
+      time: "Mar, 2020",
+      teaser: "An app displays COVID-19 statistics",
+      category: [Cate.frontEnd, Cate.deisgnAndAnimation],
+      tags: [Tag.react, Tag.nodeJs, Tag.ts, Tag.app],
+    },
   ],
-};
-
-const ThesisArchive: IProject = {
-  priority: 100,
-  title: "ITP Thesis Archive 2020",
-  cover: {
-    image: "images/brainRoller-Cover.jpg",
-    animationFormat: AnimationFormat.video,
-    animation: "images/videos/brainRoller-Cover-Video.mp4",
-  },
-  link: new URL(
-    "http://yangyang.blog/articles/2019/03/poster-design-for-2018-itp-spring-show/"
-  ),
-  time: "Apr, 2020",
-  teaser: "An gallery full of suprises.",
-  category: [Cate.frontEnd],
-  tags: [Tag.react, Tag.nodeJs, Tag.ts],
 };
 
 export default data;

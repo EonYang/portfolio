@@ -1,6 +1,6 @@
 //@ts-nocheck
 import React from "react";
-import { FaGithub, FaLinkedin, FaBriefcase, FaRProject } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaBriefcase } from "react-icons/fa";
 
 const MySocialMedias = () => (
   <>

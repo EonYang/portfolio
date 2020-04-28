@@ -4,14 +4,14 @@ import Header from "../components/Header";
 import MySocialMedias from "../components/MySocialMedias";
 import { Parallax, ParallaxLayer } from "react-spring/addons";
 import svgPathInterpolators from "../components/svgMorph";
-import { animated, useSpring, config } from "react-spring";
+// import { animated, useSpring, config } from "react-spring";
 
 const VIDEO_FRAMERATE = 30;
 const VIDEO_LENGTH = 20;
 
 const Page1 = () => (
   <ParallaxLayer offset={0} speed={1}>
-    <h1> About Me </h1>
+    <h1> Under Construction </h1>
   </ParallaxLayer>
 );
 
@@ -72,7 +72,7 @@ const Page5SvgMorph = React.forwardRef(({ svgMorphTop }, ref) => {
     set(
       Math.sin(Math.min(Math.PI / 2, Math.max(0, (400 - svgMorphTop) / 200)))
     );
-  });
+  }, [set, svgMorphTop]);
 
   return (
     <>

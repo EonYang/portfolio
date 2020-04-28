@@ -1,5 +1,5 @@
 //@ts-nocheck
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import BigNav from "./BigNav";

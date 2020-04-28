@@ -1,26 +1,45 @@
 //@ts-nocheck
 import $ from "jquery";
+import { IProject } from "../types";
 
 class Tools {
   constructor() {
     this.elementsInView = [];
   }
 
-  extractCategories(projects) {
+  // extractCategories(projects) {
+  //   let categories = new Map();
+  //   projects.forEach((project) => {
+  //     project.category.forEach((category) => {
+  //       if (categories.has(category)) {
+  //         categories.get(category).count++;
+  //       } else {
+  //         categories.set(category, {
+  //           count: 1,
+  //           category: category,
+  //         });
+  //       }
+  //     });
+  //   });
+  //   return [...categories.values()].sort((a, b) => b.count - a.count);
+  // }
+
+  extractCategories(projects: IProject[]) {
     let categories = new Map();
     projects.forEach((project) => {
       project.category.forEach((category) => {
         if (categories.has(category)) {
-          categories.get(category).count++;
+          categories.get(category).priority += project.priority;
         } else {
           categories.set(category, {
-            count: 1,
+            priority: 1,
             category: category,
           });
         }
       });
     });
-    return [...categories.values()].sort((a, b) => b.count - a.count);
+    console.log(categories.values());
+    return [...categories.values()].sort((a, b) => b.priority - a.priority);
   }
 
   openLink(link) {
