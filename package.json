@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A simple webpage displaying my recent works",
   "main": "src/index.tsx",
+  "homepage": "portfolio/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

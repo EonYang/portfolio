@@ -127,7 +127,6 @@ const AboutPage = () => {
     <>
       <div className="about" onWheel={onWheel}>
         <Parallax pages={4}>
-          <Header />
           <Page1 />
 
           <Page2BG />
