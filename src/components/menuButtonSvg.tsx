@@ -1,6 +1,6 @@
 //@ts-nocheck
 import { interpolate } from "flubber";
-import { useSpring, Spring, animated as a } from "react-spring";
+import { useSpring, animated as a } from "react-spring";
 import React, { useEffect } from "react";
 
 const xPaths = [
@@ -30,15 +30,13 @@ for (let i = 0; i < paths.length; i++) {
   }
   menuSvgPathInterpolators.push(hmmmm);
 }
-console.log(menuSvgPathInterpolators[2][1](0.5));
 
 const MenuButton = ({ burger }: { burger: boolean }) => {
   const [{ t }, set] = useSpring(() => ({ t: 0 }));
   useEffect(() => {
-    console.log(burger);
     if (burger) set({ t: 0 });
     else set({ t: 1 });
-  }, [burger]);
+  }, [burger, set]);
 
   return (
     <>

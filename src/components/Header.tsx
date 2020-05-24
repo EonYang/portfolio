@@ -3,7 +3,6 @@ import React, { useState, useRef } from "react";
 import { Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import BigNav from "./BigNav";
-import AnimatedIcon from "react-useanimations";
 import MenuButton from "./menuButtonSvg";
 // import { myp5 } from "../../public/logo";
 

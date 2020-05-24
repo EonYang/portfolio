@@ -93,7 +93,7 @@ const data: IData = {
       tags: [Tag.arduino],
     },
     {
-      priority: 40,
+      priority: 45,
       title: "Oblivion",
       cover: {
         image: "images/Oblivion-Cover.jpg",

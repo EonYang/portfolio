@@ -1,6 +1,5 @@
 //@ts-nocheck
 import React, { useRef, useState, useEffect } from "react";
-import Header from "../components/Header";
 import MySocialMedias from "../components/MySocialMedias";
 import { Parallax, ParallaxLayer } from "react-spring/addons";
 import svgPathInterpolators from "../components/svgMorph";

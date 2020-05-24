@@ -19,7 +19,7 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
       1
     );
 
-    console.log(columns, windowWidth);
+    // console.log(columns, windowWidth);
     const categories = ["All"].concat(
       Tools.extractCategories(projects).map((item) => item.category)
     );
@@ -38,7 +38,7 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
       return { ...project, xy, width: cardWidth, height: cardHeight };
     });
 
-    console.log(gridItems);
+    // console.log(gridItems);
     useEffect(() => {
       if (selected === "All") setProjects(projects);
       else

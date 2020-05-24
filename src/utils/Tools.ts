@@ -38,7 +38,7 @@ class Tools {
         }
       });
     });
-    console.log(categories.values());
+    // console.log(categories.values());
     return [...categories.values()].sort((a, b) => b.priority - a.priority);
   }
 
