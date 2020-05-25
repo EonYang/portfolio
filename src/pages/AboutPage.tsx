@@ -4,13 +4,15 @@ import MySocialMedias from "../components/MySocialMedias";
 import { Parallax, ParallaxLayer } from "react-spring/addons";
 import svgPathInterpolators from "../components/svgMorph";
 // import { animated, useSpring, config } from "react-spring";
-
+import ParaGraph from "components/Paragraph.tsx";
+import data from "data/content";
 const VIDEO_FRAMERATE = 30;
 const VIDEO_LENGTH = 20;
 
 const Page1 = () => (
   <ParallaxLayer offset={0} speed={1}>
-    <h1> Under Construction </h1>
+    <h1> About Yang </h1>
+    <ParaGraph text={data.about[0]} />
   </ParallaxLayer>
 );
 

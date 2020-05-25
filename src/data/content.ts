@@ -30,6 +30,23 @@ const Tag = {
 };
 
 const data: IData = {
+  about: [
+    `Thank you for clicking that About button. Your reward is an exciting story about Yang, who is in love with Software Engineering and UX Engineering.`,
+
+    `Current Position: Resident Researcher at NYU, TSOA, ITP. 
+My most recent UX Engineer project is the Thesis Archive website of our school. [preview it here](). [ Read the story here]();`,
+
+    `Before I work for ITP, I was an ITP student. During my two years of studies, I fully embraced all kinds of Technologies and did some wild projects.`,
+    `When I must choose one path as my career, I selected UX Engineering and Node.js. 
+
+The reason leads to my previous stories. Before I made myself a developer, I had been a product designer and a UX designer, which is why I love making things facing direct users. `,
+
+    `Am I just another React developer? Yes and no. I develop with React and Redux, but with better details, and always focusing on user experiences.`,
+
+    `More about me? 
+
+Developing takes 70% of my life, the other 30% include: playing guitar, making metal music, making animations, drinking IPAs, watching movies.`,
+  ],
   projects: [
     {
       priority: 60,

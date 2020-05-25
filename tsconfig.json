@@ -20,6 +20,7 @@
     "jsx": "react"
   },
   "include": [
-    "src", "public/logo.js"
+    "src",
+    "public/logo.js"
   ]
 }
