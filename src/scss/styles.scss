@@ -2,29 +2,21 @@
 @import "./variables.scss";
 @import "./bigNav.scss";
 @import "./about.scss";
+@import "./mixins.scss";
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Muli", sans-serif !important;
-}
+$sm-min: 560px;
+$md-min: 768px;
 
 body {
   color: $text-color-main;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: "Muli", sans-serif !important;
   overflow-x: hidden;
   font-size: 21px;
+  background-color: $bg-color !important;
 }
 
 a:link {
   text-decoration: none;
-}
-
-body {
-  background-color: $bg-color !important;
 }
 
 .nav-pills .nav-link.active,
@@ -33,7 +25,23 @@ body {
 }
 
 #header {
-  min-height: 120px;
+  min-height: 61.8vh;
+}
+
+.hero {
+  position: relative;
+  margin: 10vh 16px;
+  @include break($sm-min) {
+    margin: 10vh 8%;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 10vh;
+    @include break($sm-min) {
+      font-size: 20vh;
+    }
+  }
 }
 
 .coverContainer {

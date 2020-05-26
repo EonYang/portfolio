@@ -1,4 +1,3 @@
-//@ts-nocheck
 import React from "react";
 import ProjectsList from "../components/ProjectsList";
 import data from "../data/content";
@@ -6,6 +5,13 @@ import data from "../data/content";
 const PortfolioPage = ({ isMobile }) => {
   return (
     <>
+      <div className="hero">
+        <h1>
+          Yang's
+          <br />
+          Projects
+        </h1>
+      </div>
       <ProjectsList
         projects={data.projects.sort((a, b) => b.priority - a.priority)}
         isMobile={isMobile}
@@ -17,4 +23,4 @@ const PortfolioPage = ({ isMobile }) => {
     </>
   );
 };
-export default PortfolioPage;
+export default React.memo(PortfolioPage);

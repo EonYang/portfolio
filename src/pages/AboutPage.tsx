@@ -10,8 +10,14 @@ const VIDEO_FRAMERATE = 30;
 const VIDEO_LENGTH = 20;
 
 const Page1 = () => (
-  <ParallaxLayer offset={0} speed={1}>
-    <h1> About Yang </h1>
+  <ParallaxLayer offset={0.1} speed={0.7}>
+    <div className="hero">
+      <h1>
+        About
+        <br />
+        Yang
+      </h1>
+    </div>
     <ParaGraph text={data.about[0]} />
   </ParallaxLayer>
 );
