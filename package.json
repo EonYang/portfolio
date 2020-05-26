@@ -9,7 +9,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "scp -r -P 27416 build/* root@104.224.142.164:/var/www/html/portfolio/"
+    "deploy": "react-scripts build; scp -r -P 27416 build/* root@104.224.142.164:/var/www/html/portfolio/"
   },
   "repository": {
     "type": "git",
