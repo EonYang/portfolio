@@ -31,7 +31,7 @@ const Page2BG = () => (
       backgroundColor: "#805E73",
       opacity: 0.1,
     }}
-  />
+  ></ParallaxLayer>
 );
 
 const ThesisVideo = React.forwardRef(({ videoTop }, ref) => {
