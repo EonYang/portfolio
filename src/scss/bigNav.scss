@@ -1,13 +1,14 @@
 #my-navbar {
   mix-blend-mode: darken;
   z-index: 999999;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   height: 120px;
   padding-top: 32px;
   background-color: #ffffffcc;
+  transition: top 0.3s;
 
   .my-navbar-brand {
     display: flex;

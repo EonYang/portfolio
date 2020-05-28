@@ -24,15 +24,11 @@ a:link {
   color: $text-color-main;
 }
 
-#header {
-  min-height: 61.8vh;
-}
-
 .hero {
   position: relative;
   margin: 10vh 16px;
   @include break($sm-min) {
-    margin: 10vh 8%;
+    margin: 5vh 8%;
   }
 
   h1 {

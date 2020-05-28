@@ -1,5 +1,5 @@
 //@ts-nocheck
-import React, { useState, useCallback } from "react";
+import React from "react";
 import PortfolioPage from "./pages/PortfolioPage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
@@ -8,7 +8,6 @@ import Header from "./components/Header";
 
 const App = () => {
   const isMobile = testIfMobile();
-  const [scrolled, setScrolled] = useState(0);
 
   return (
     <>

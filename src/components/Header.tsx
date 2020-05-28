@@ -4,27 +4,36 @@ import { Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import BigNav from "./BigNav";
 import MenuButton from "./menuButtonSvg";
-// import { myp5 } from "../../public/logo";
-
-// interface IHeaderProps {
-// }
 
 const Header = () => {
   const [collapse, setCollapse] = useState(true);
   const toggle = () => setCollapse((prev) => !prev);
   const logoRef = useRef(null);
-  const [scale, setScale] = useState(1);
-  const bodyTopToScale = (bodyTop) => {
-    return 1 + (600 + bodyTop) / 100;
+  // const [scale, setScale] = useState(1);
+  // const bodyTopToScale = (bodyTop) => {
+  //   return 1 + (600 + bodyTop) / 100;
+  // };
+  const [showHeader, setShowHeader] = useState(true);
+  // useEffect(() => {
+  // setScale(bodyTopToScale(document.body.getBoundingClientRect().top));
+  // }, [document.body.getBoundingClientRect().top]);
+
+  const scrollHandler = (e: React.WheelEvent<HTMLDivElement>) => {
+    setShowHeader(e.deltaY <= 0);
+    console.log("scroooooooollll");
   };
+
   useEffect(() => {
-    setScale(bodyTopToScale(document.body.getBoundingClientRect().top));
-  }, [document.body.getBoundingClientRect().top]);
+    document.body.addEventListener("wheel", scrollHandler);
+    return () => {
+      document.body.removeEventListener("wheel", scrollHandler);
+    };
+  }, []);
 
   return (
     <>
       <BigNav {...{ collapse, toggle }} />
-      <Navbar id="my-navbar">
+      <Navbar id="my-navbar" style={{ top: showHeader ? 0 : -100 }}>
         <Link to="/" className="navbar-brand my-navbar-brand">
           <div
             id="logoCanvas"
