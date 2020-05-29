@@ -42,14 +42,15 @@ const MenuButton = ({ burger }: { burger: boolean }) => {
     <>
       <div
         style={{
-          width: "48px",
-          height: "48px",
+          width: "64px",
+          height: "64px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          backgroundColor: "white",
         }}
       >
-        <svg width="50" viewBox={`-2 -2 48 48`}>
+        <svg width="32" viewBox={`0 -2 48 48`}>
           <g fill={"#000000"}>
             {menuSvgPathInterpolators.map((item, i) => (
               <a.path key={i} d={t.to((t) => item[1](t))} />
