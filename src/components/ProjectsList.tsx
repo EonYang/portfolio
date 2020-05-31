@@ -14,7 +14,7 @@ interface IProjectsListProps {
 const ProjectsList: FC<IProjectsListProps> = React.memo(
   ({ projects, isMobile }) => {
     const { columns, windowWidth } = useMedia(
-      ["(min-width: 1200px)", "(min-width: 800px)", "(min-width: 600px)"],
+      ["(min-width: 1500px)", "(min-width: 900px)", "(min-width: 600px)"],
       [3, 2, 1],
       1
     );
@@ -30,7 +30,7 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
 
     let heights = new Array(columns).fill(0);
     const cardWidth = windowWidth / columns;
-    const cardHeight = cardWidth * 0.7;
+    const cardHeight = cardWidth * 0.9;
 
     const gridItems = filteredProjects.map((project, i) => {
       const col = i % columns;

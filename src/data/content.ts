@@ -30,6 +30,8 @@ const Tag = {
 };
 
 const data: IData = {
+  intro: `
+  `,
   about: [
     `Thank you for clicking that About button. Your reward is an exciting story about Yang, who is in love with Software Engineering and UX Engineering.`,
 

@@ -23,4 +23,5 @@ export interface IProject {
 export interface IData {
   projects: IProject[];
   about: string[];
+  intro: string;
 }

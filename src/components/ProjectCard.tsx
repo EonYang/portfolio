@@ -33,11 +33,19 @@ const ProjectCard = ({ project, isMobile, width, height }) => {
     return;
   }
 
+  let left = width * 0.05;
+  width = width * 0.9;
+  height = height * 0.7;
+
   return (
     <>
       <div
         className="coverContainer mx-auto overflow-hidden"
-        style={{ width, height }}
+        style={{
+          left,
+          width,
+          height,
+        }}
         onClick={() => Tools.openLink(project.link)}
       >
         <video
@@ -60,12 +68,17 @@ const ProjectCard = ({ project, isMobile, width, height }) => {
             height,
             backgroundImage: `url(${require(`../data/${project.cover.image}`)})`,
           }}
-        >
-          <div className="darkOverlay"></div>
-          <h3 className="title w-50 h2 h-auto mx-auto font-weight-lighter text-uppercase">
-            {project.title}
-          </h3>
-        </div>
+        ></div>
+      </div>
+      <div
+        className="project-info"
+        style={{
+          left,
+          width,
+        }}
+      >
+        <h3 className="text-uppercase">{project.title}</h3>
+        <p>{project.teaser}</p>
       </div>
     </>
   );

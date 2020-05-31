@@ -1,17 +1,12 @@
 import React from "react";
 import ProjectsList from "../components/ProjectsList";
 import data from "../data/content";
+import MyIntro from "components/MyIntro";
 
 const PortfolioPage = ({ isMobile }) => {
   return (
     <>
-      <div className="hero">
-        <h1>
-          Yang's
-          <br />
-          Projects
-        </h1>
-      </div>
+      <MyIntro />
       <ProjectsList
         projects={data.projects.sort((a, b) => b.priority - a.priority)}
         isMobile={isMobile}

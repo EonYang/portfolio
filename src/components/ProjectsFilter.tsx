@@ -5,7 +5,13 @@ import { Nav, Navbar } from "react-bootstrap";
 const ProjectsFilter = ({ categories, setSelected, selected }) => {
   return (
     <>
-      <Navbar expand="md" bg="white" collapseOnSelect={true}>
+      <Navbar
+        className="projects-filter"
+        expand="md"
+        bg="white"
+        sticky="top"
+        collapseOnSelect={true}
+      >
         <Navbar.Toggle>
           <small>{selected}</small>
         </Navbar.Toggle>
