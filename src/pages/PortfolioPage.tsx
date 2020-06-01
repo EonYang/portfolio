@@ -2,6 +2,8 @@ import React from "react";
 import ProjectsList from "../components/ProjectsList";
 import data from "../data/content";
 import MyIntro from "components/MyIntro";
+import MySocialMedias from "../components/MySocialMedias";
+import { Parallax, ParallaxLayer } from "react-spring/addons";
 
 const PortfolioPage = ({ isMobile }) => {
   return (
@@ -11,11 +13,27 @@ const PortfolioPage = ({ isMobile }) => {
         projects={data.projects.sort((a, b) => b.priority - a.priority)}
         isMobile={isMobile}
       />
-      <div style={{ height: "1000px" }}></div>
-      <div className=" w-100 ">
-        <p className="text-center">Hmm, what are you looking for?</p>
+      <div style={{ height: "200px" }}></div>
+      <MySocialMedias />
+    </>
+  );
+};
+
+const Para = ({ isMobile }) => {
+  return (
+    <>
+      <div className="">
+        <Parallax pages={5}>
+          <ParallaxLayer offset={0} speed={0.2}></ParallaxLayer>
+          <ParallaxLayer offset={0.7} speed={1}>
+            <PortfolioPage {...{ isMobile }} />
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={3} speed={1}></ParallaxLayer>
+        </Parallax>
       </div>
     </>
   );
 };
+
 export default React.memo(PortfolioPage);

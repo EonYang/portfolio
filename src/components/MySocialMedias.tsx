@@ -3,7 +3,7 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaBriefcase } from "react-icons/fa";
 
 const MySocialMedias = () => (
-  <>
+  <div className="about">
     <h1>Yang Yang</h1>
     <ul className="nav navbar-dark justify-content-center">
       <li className="nav-item">
@@ -25,7 +25,7 @@ const MySocialMedias = () => (
         </a>
       </li>
     </ul>
-  </>
+  </div>
 );
 
 export default MySocialMedias;

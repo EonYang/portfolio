@@ -20,7 +20,6 @@ const Header = () => {
 
   const scrollHandler = (e: React.WheelEvent<HTMLDivElement>) => {
     setShowHeader(e.deltaY <= 0);
-    console.log("scroooooooollll");
   };
 
   useEffect(() => {
@@ -33,7 +32,7 @@ const Header = () => {
   return (
     <>
       <BigNav {...{ collapse, toggle }} />
-      <Navbar id="my-navbar" style={{ top: showHeader ? 0 : -100 }}>
+      <Navbar id="my-navbar" style={{ top: showHeader ? 0 : -120 }}>
         <Link to="/" className="navbar-brand my-navbar-brand">
           <div
             id="logoCanvas"

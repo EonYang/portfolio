@@ -4,9 +4,6 @@
 @import "./about.scss";
 @import "./mixins.scss";
 
-$sm-min: 560px;
-$md-min: 768px;
-
 body {
   color: $text-color-main;
   font-family: "Muli", sans-serif !important;

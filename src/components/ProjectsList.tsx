@@ -14,7 +14,7 @@ interface IProjectsListProps {
 const ProjectsList: FC<IProjectsListProps> = React.memo(
   ({ projects, isMobile }) => {
     const { columns, windowWidth } = useMedia(
-      ["(min-width: 1500px)", "(min-width: 900px)", "(min-width: 600px)"],
+      ["(min-width: 1900px)", "(min-width: 1000px)", "(min-width: 600px)"],
       [3, 2, 1],
       1
     );

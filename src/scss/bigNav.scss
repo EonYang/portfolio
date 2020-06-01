@@ -1,3 +1,6 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
 #my-navbar {
   z-index: 999999;
   position: fixed;
@@ -50,9 +53,13 @@
     text-align: center;
 
     h1 {
-      font-size: 15vh;
-      line-height: 20vh;
+      font-size: 15vw;
+      line-height: 30vw;
       color: black;
+      @include break($sm-min) {
+        font-size: 15vh;
+        line-height: 20vh;
+      }
     }
   }
 }

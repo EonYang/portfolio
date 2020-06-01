@@ -7,10 +7,12 @@ const MyIntroHero = () => {
       <h1>
         <br />
         <br />
-        <br />
         Hi, I'm Yang,
       </h1>
       <h2>a Software Engineer and UX Engineer.</h2>
+      <h2>
+        <a>Resume</a>, <a href="https://github.com/EonYang">Github</a>
+      </h2>
     </div>
   );
 };
