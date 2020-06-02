@@ -52,6 +52,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
   projects: [
     {
       priority: 60,
+      wpid: 1203,
       title: "Magical Pencil",
       cover: {
         image: "images/MagicalPencil-Cover.jpg",
@@ -67,6 +68,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 15,
+      wpid: 1386,
       title: "Thesis Archive with WebVR",
       cover: {
         image: "images/ThesisArchivePrototype-Cover.jpg",
@@ -83,6 +85,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 2,
+      wpid: 838,
       title: "Simple Mirror",
       cover: {
         image: "images/simpleMirror-Cover.jpg",
@@ -98,6 +101,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 3,
+      wpid: 862,
       title: "New Toy",
       cover: {
         image: "images/NIME-Cover.jpg",
@@ -113,6 +117,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 45,
+      wpid: 903,
       title: "Oblivion",
       cover: {
         image: "images/Oblivion-Cover.jpg",
@@ -127,6 +132,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 5,
+      wpid: 891,
       title: "It's Time to Go to Time",
       cover: {
         image: "images/ittgtt-Cover.jpg",
@@ -143,6 +149,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 6,
+      wpid: 967,
       title: "The Machine of Boredom",
       cover: {
         image: "images/woodenHand-Cover.jpg",
@@ -160,6 +167,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 7,
+      wpid: 981,
       title: "Todd",
       cover: {
         image: "images/todd-Cover.jpg",
@@ -174,6 +182,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 8,
+      wpid: 937,
       title: "Bully",
       cover: {
         image: "images/bully-Cover.jpg",
@@ -189,6 +198,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 30,
+      wpid: 961,
       title: "Zen Dog",
       cover: {
         image: "images/zenDog-Cover.jpg",
@@ -203,6 +213,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 40,
+      wpid: 993,
       title: "Which Pill",
       cover: {
         image: "images/whichPill-Cover.jpg",
@@ -217,6 +228,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 11,
+      wpid: 1018,
       title: "P5.js Skethes",
       cover: {
         image: "images/p5-Cover.jpg",
@@ -233,6 +245,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 12,
+      wpid: 1033,
       title: "Pre-ITP Projects",
       cover: {
         image: "images/behinders-Cover.jpg",
@@ -249,6 +262,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 13,
+      wpid: 1067,
       title: "ITP Spring Show Poster",
       cover: {
         image: "images/brainRoller-Cover.jpg",
@@ -265,6 +279,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 100,
+      wpid: 1412,
       title: "ITP Thesis Archive 2020",
       cover: {
         image: "images/Thesis-Archive-Cover.jpg",
@@ -281,6 +296,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 80,
+      wpid: 1423,
       title: "COVID-19-Ticker",
       cover: {
         image: "images/Covid-Ticker-Cover.jpg",

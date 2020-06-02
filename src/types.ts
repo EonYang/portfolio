@@ -11,6 +11,7 @@ export interface ICover {
 
 export interface IProject {
   priority: number;
+  wpid: number;
   title: string;
   cover: ICover;
   link: URL;
