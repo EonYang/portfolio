@@ -11,6 +11,7 @@ export interface ICover {
 
 export interface IProject {
   priority: number;
+  featured: boolean;
   wpid: number;
   title: string;
   cover: ICover;
@@ -23,6 +24,4 @@ export interface IProject {
 
 export interface IData {
   projects: IProject[];
-  about: string[];
-  intro: string;
 }

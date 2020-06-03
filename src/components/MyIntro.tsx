@@ -11,7 +11,8 @@ const MyIntroHero = () => {
       </h1>
       <h2>a Software Engineer and UX Engineer.</h2>
       <h2>
-        <a>Resume</a>, <a href="https://github.com/EonYang">Github</a>
+        <a href="#top">Resume</a>,{" "}
+        <a href="https://github.com/EonYang">Github</a>
       </h2>
     </div>
   );

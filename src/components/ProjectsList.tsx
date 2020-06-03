@@ -9,15 +9,18 @@ import { IProject } from "../types";
 interface IProjectsListProps {
   projects: IProject[];
   isMobile: boolean;
+  filterOn: boolean;
 }
 
 const ProjectsList: FC<IProjectsListProps> = React.memo(
-  ({ projects, isMobile }) => {
+  ({ projects, isMobile, filterOn }) => {
     const { columns, windowWidth } = useMedia(
       ["(min-width: 1900px)", "(min-width: 1000px)", "(min-width: 600px)"],
       [3, 2, 1],
       1
     );
+
+    let gap = 0.02;
 
     // console.log(columns, windowWidth);
     const categories = ["All"].concat(
@@ -29,16 +32,19 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
     const [filteredProjects, setProjects] = useState(projects);
 
     let heights = new Array(columns).fill(0);
-    const cardWidth = windowWidth / columns;
+    const cardWidth =
+      (windowWidth - windowWidth * gap * (columns + 1)) / columns;
     const cardHeight = cardWidth * 0.9;
 
     const gridItems = filteredProjects.map((project, i) => {
       const col = i % columns;
-      const xy = [cardWidth * col, (heights[col] += cardHeight) - cardHeight];
+      const xy = [
+        cardWidth * col + col * gap * windowWidth,
+        (heights[col] += cardHeight) - cardHeight,
+      ];
       return { ...project, xy, width: cardWidth, height: cardHeight };
     });
 
-    // console.log(gridItems);
     useEffect(() => {
       if (selected === "All") setProjects(projects);
       else
@@ -46,14 +52,6 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
           projects.filter((project) => project.category.includes(selected))
         );
     }, [selected, projects]);
-
-    // useEffect(() => {
-    //     if (isMobile) {
-    //         $(".coverContainer").each((index, element) => {
-    //             videoObserver.observe(element);
-    //         })
-    //     }
-    // }, [videoObserver, isMobile])
 
     const filterProps = { projects, categories, selected, setSelected };
 
@@ -86,8 +84,8 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
     });
 
     return (
-      <>
-        <ProjectsFilter {...filterProps} />
+      <div className="projects-cards">
+        {filterOn && <ProjectsFilter {...filterProps} />}
         <div
           className="position-relative "
           style={{
@@ -118,7 +116,7 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
             );
           })}
         </div>
-      </>
+      </div>
     );
   }
 );

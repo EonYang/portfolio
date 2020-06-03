@@ -30,28 +30,10 @@ const Tag = {
 };
 
 const data: IData = {
-  intro: `
-  `,
-  about: [
-    `Thank you for clicking that About button. Your reward is an exciting story about Yang, who is in love with Software Engineering and UX Engineering.`,
-
-    `Current Position: Resident Researcher at NYU, TSOA, ITP. 
-My most recent UX Engineer project is the Thesis Archive website of our school. [preview it here](). [ Read the story here]();`,
-
-    `Before I work for ITP, I was an ITP student. During my two years of studies, I fully embraced all kinds of Technologies and did some wild projects.`,
-    `When I must choose one path as my career, I selected UX Engineering and Node.js. 
-
-The reason leads to my previous stories. Before I made myself a developer, I had been a product designer and a UX designer, which is why I love making things facing direct users. `,
-
-    `Am I just another React developer? Yes and no. I develop with React and Redux, but with better details, and always focusing on user experiences.`,
-
-    `More about me? 
-
-Developing takes 70% of my life, the other 30% include: playing guitar, making metal music, making animations, drinking IPAs, watching movies.`,
-  ],
   projects: [
     {
       priority: 60,
+      featured: true,
       wpid: 1203,
       title: "Magical Pencil",
       cover: {
@@ -68,6 +50,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 15,
+      featured: false,
       wpid: 1386,
       title: "Thesis Archive with WebVR",
       cover: {
@@ -85,6 +68,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 2,
+      featured: false,
       wpid: 838,
       title: "Simple Mirror",
       cover: {
@@ -101,6 +85,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 3,
+      featured: false,
       wpid: 862,
       title: "New Toy",
       cover: {
@@ -117,6 +102,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 45,
+      featured: true,
       wpid: 903,
       title: "Oblivion",
       cover: {
@@ -132,6 +118,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 5,
+      featured: false,
       wpid: 891,
       title: "It's Time to Go to Time",
       cover: {
@@ -149,6 +136,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 6,
+      featured: false,
       wpid: 967,
       title: "The Machine of Boredom",
       cover: {
@@ -167,6 +155,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 7,
+      featured: false,
       wpid: 981,
       title: "Todd",
       cover: {
@@ -182,6 +171,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 8,
+      featured: false,
       wpid: 937,
       title: "Bully",
       cover: {
@@ -198,6 +188,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 30,
+      featured: false,
       wpid: 961,
       title: "Zen Dog",
       cover: {
@@ -213,6 +204,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 40,
+      featured: false,
       wpid: 993,
       title: "Which Pill",
       cover: {
@@ -229,6 +221,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     {
       priority: 11,
       wpid: 1018,
+      featured: false,
       title: "P5.js Skethes",
       cover: {
         image: "images/p5-Cover.jpg",
@@ -245,6 +238,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 12,
+      featured: false,
       wpid: 1033,
       title: "Pre-ITP Projects",
       cover: {
@@ -262,6 +256,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     },
     {
       priority: 13,
+      featured: false,
       wpid: 1067,
       title: "ITP Spring Show Poster",
       cover: {
@@ -280,6 +275,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     {
       priority: 100,
       wpid: 1412,
+      featured: true,
       title: "ITP Thesis Archive 2020",
       cover: {
         image: "images/Thesis-Archive-Cover.jpg",
@@ -297,6 +293,7 @@ Developing takes 70% of my life, the other 30% include: playing guitar, making m
     {
       priority: 80,
       wpid: 1423,
+      featured: true,
       title: "COVID-19-Ticker",
       cover: {
         image: "images/Covid-Ticker-Cover.jpg",
