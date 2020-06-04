@@ -21,7 +21,6 @@
     "baseUrl": "src/"
   },
   "include": [
-    "src",
-    "public/logo.js"
+    "src"
   ]
 }

@@ -1,5 +1,6 @@
 //@ts-nocheck
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MyIntroHero = () => {
   return (
@@ -11,7 +12,7 @@ const MyIntroHero = () => {
       </h1>
       <h2>a Software Engineer and UX Engineer.</h2>
       <h2>
-        <a href="#top">Resume</a>,{" "}
+        <Link to="/resume">Resume</Link>,{" "}
         <a href="https://github.com/EonYang">Github</a>
       </h2>
     </div>
