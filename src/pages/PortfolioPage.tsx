@@ -10,7 +10,7 @@ const PortfolioPage = ({ isMobile }) => {
     <>
       <MyIntro />
       <h1 style={{ marginLeft: "4vw" }}>
-        ♥︎ Featured
+        🌈 Featured
         <br />
         <br />
       </h1>
@@ -22,7 +22,7 @@ const PortfolioPage = ({ isMobile }) => {
         filterOn={false}
       />
       <h1 style={{ marginLeft: "4vw" }}>
-        ⚛︎ Projects
+        ✨ Projects
         <br />
         <br />
       </h1>
