@@ -1,5 +1,5 @@
 //@ts-nocheck
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import BigNav from "./BigNav";
@@ -22,10 +22,13 @@ const Header = () => {
   const scrollHandler = (e: React.WheelEvent<HTMLDivElement>) => {
     setShowHeader(e.deltaY <= 0);
   };
-  const touchMoveHandler = (e: React.TouchEvent<HTMLDivElement>) => {
-    console.log(e.pageY, touchY, e.pageY - touchY);
-    setShowHeader(e.pageY - touchY >= 0);
-  };
+  const touchMoveHandler = useCallback(
+    (e: React.TouchEvent<HTMLDivElement>) => {
+      console.log(e.pageY, touchY, e.pageY - touchY);
+      setShowHeader(e.pageY - touchY >= 0);
+    },
+    [touchY, setShowHeader]
+  );
   const touchStartHandler = (e: React.TouchEvent<HTMLDivElement>) => {
     setTouchY(e.pageY);
   };
@@ -39,7 +42,7 @@ const Header = () => {
       document.body.removeEventListener("touchmove", touchMoveHandler);
       document.body.removeEventListener("touchstart", touchStartHandler);
     };
-  }, [touchY]);
+  }, [touchY, touchMoveHandler]);
 
   return (
     <>
