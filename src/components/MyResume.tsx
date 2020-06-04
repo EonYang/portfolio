@@ -1,22 +1,25 @@
 //@ts-nocheck
 import React from "react";
-import { Document, Page, pdfjs } from "react-pdf";
+import { Document, Page } from "react-pdf/dist/umd/entry.webpack";
 import Resume from "data/Resume_Yang_Yang_SWE.pdf";
-
-pdfjs.GlobalWorkerOptions.workerSrc = `http://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-console.log(pdfjs.GlobalWorkerOptions.workerSrc);
 
 const MyResume = () => {
   return (
-    <div>
-      <h1>
-        <br />
-        <br />
-        My Resume
-      </h1>
-      <button>Download</button>
-      <Document file={Resume}></Document>
-    </div>
+    <>
+      <div className="hero text-center">
+        <h1>My Resume</h1>
+        <h2>
+          <a href={Resume} download="Resume_Yang_Yang_SWE">
+            Download PDF
+          </a>
+        </h2>
+      </div>
+      <div className="embeded-pdf">
+        <Document file={Resume} renderMode={"svg"}>
+          <Page pageNumber={1} height="1000" />
+        </Document>
+      </div>
+    </>
   );
 };
 
