@@ -14,6 +14,7 @@ const Header = () => {
   //   return 1 + (600 + bodyTop) / 100;
   // };
   const [showHeader, setShowHeader] = useState(true);
+  const [touchY, setTouchY] = useState(0);
   // useEffect(() => {
   // setScale(bodyTopToScale(document.body.getBoundingClientRect().top));
   // }, [document.body.getBoundingClientRect().top]);
@@ -21,13 +22,24 @@ const Header = () => {
   const scrollHandler = (e: React.WheelEvent<HTMLDivElement>) => {
     setShowHeader(e.deltaY <= 0);
   };
+  const touchMoveHandler = (e: React.TouchEvent<HTMLDivElement>) => {
+    console.log(e.pageY, touchY, e.pageY - touchY);
+    setShowHeader(e.pageY - touchY >= 0);
+  };
+  const touchStartHandler = (e: React.TouchEvent<HTMLDivElement>) => {
+    setTouchY(e.pageY);
+  };
 
   useEffect(() => {
     document.body.addEventListener("wheel", scrollHandler);
+    document.body.addEventListener("touchmove", touchMoveHandler);
+    document.body.addEventListener("touchstart", touchStartHandler);
     return () => {
       document.body.removeEventListener("wheel", scrollHandler);
+      document.body.removeEventListener("touchmove", touchMoveHandler);
+      document.body.removeEventListener("touchstart", touchStartHandler);
     };
-  }, []);
+  }, [touchY]);
 
   return (
     <>

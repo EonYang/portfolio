@@ -20,10 +20,10 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
       [800, 1900, Infinity], // max width
       [1, 2, 3],
       2,
-      0.06
+      0.1
     );
 
-    let gutter = 0.02;
+    let gutter = 0.05;
 
     const categories = ["All"].concat(
       Tools.extractCategories(projects).map((item) => item.category)

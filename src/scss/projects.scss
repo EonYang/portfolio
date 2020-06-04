@@ -6,12 +6,13 @@
 // }
 
 .projects-cards {
-  margin: 0 3% 1em 3%;
+  margin: 0 5% 1em 5%;
 }
 
 .coverContainer {
   z-index: 1;
   position: absolute;
+  // padding: 5%;
 
   &:hover {
     transform: scale(1.05);
@@ -42,14 +43,14 @@
     background-size: cover;
   }
 
-  .darkOverlay {
-    background-color: #151c22 !important;
-    position: absolute;
-    top: 0px;
-    opacity: 0.3;
-    width: 100%;
-    height: 100%;
-  }
+  // .darkOverlay {
+  //   background-color: #151c22 !important;
+  //   position: absolute;
+  //   top: 0px;
+  //   opacity: 0.3;
+  //   width: 100%;
+  //   height: 100%;
+  // }
 
   .disapperWhenHover {
     opacity: 1;
