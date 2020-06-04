@@ -1,7 +1,7 @@
-import React, { useState, useEffect, FC } from "react";
+import React, { useState, useEffect, FC, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectsFilter from "./ProjectsFilter";
-import { useMedia } from "../utils/CustomHooks";
+import { useClientWidth } from "../utils/CustomHooks";
 import Tools from "../utils/Tools";
 import { animated, useTransition } from "react-spring";
 import { IProject } from "../types";
@@ -14,32 +14,33 @@ interface IProjectsListProps {
 
 const ProjectsList: FC<IProjectsListProps> = React.memo(
   ({ projects, isMobile, filterOn }) => {
-    const { columns, windowWidth } = useMedia(
-      ["(min-width: 1900px)", "(min-width: 1000px)", "(min-width: 600px)"],
-      [3, 2, 1],
-      1
+    const containerRef = useRef(null);
+    const { columns, windowWidth } = useClientWidth(
+      containerRef,
+      [800, 1900, Infinity], // max width
+      [1, 2, 3],
+      2,
+      0.06
     );
 
-    let gap = 0.02;
+    let gutter = 0.02;
 
-    // console.log(columns, windowWidth);
     const categories = ["All"].concat(
       Tools.extractCategories(projects).map((item) => item.category)
     );
 
-    // let videoObserver = Tools.createIntersectionObserver(isMobile);
     const [selected, setSelected] = useState("All");
     const [filteredProjects, setProjects] = useState(projects);
 
     let heights = new Array(columns).fill(0);
     const cardWidth =
-      (windowWidth - windowWidth * gap * (columns + 1)) / columns;
+      (windowWidth - windowWidth * gutter * (columns - 1)) / columns;
     const cardHeight = cardWidth * 0.9;
 
     const gridItems = filteredProjects.map((project, i) => {
       const col = i % columns;
       const xy = [
-        cardWidth * col + col * gap * windowWidth,
+        cardWidth * col + col * gutter * windowWidth,
         (heights[col] += cardHeight) - cardHeight,
       ];
       return { ...project, xy, width: cardWidth, height: cardHeight };
@@ -84,13 +85,12 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
     });
 
     return (
-      <div className="projects-cards">
+      <div className="projects-cards" ref={containerRef}>
         {filterOn && <ProjectsFilter {...filterProps} />}
         <div
           className="position-relative "
           style={{
-            left: "15px",
-            width: windowWidth,
+            width: "100%",
             height: Math.max(...heights),
           }}
         >
