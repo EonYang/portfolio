@@ -40,6 +40,7 @@ a:link {
     width: 100%;
     font-weight: 700;
     font-size: 5vh;
+    margin-bottom: 30px;
     @include break($sm-min) {
       font-size: 5vw;
     }
