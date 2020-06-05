@@ -1,7 +1,10 @@
 //@ts-nocheck
 import React from "react";
 import { Document, Page } from "react-pdf/dist/umd/entry.webpack";
-import Resume from "data/Resume_Yang_Yang_SWE.pdf";
+import SWEResume from "data/Resume_Yang_Yang_SWE.pdf";
+import UXResume from "data/Yang_Yang_UX-Engineer_Resume.pdf";
+
+const Resume = UXResume;
 
 const MyResume = () => {
   return (
