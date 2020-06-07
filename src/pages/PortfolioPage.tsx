@@ -9,30 +9,16 @@ const PortfolioPage = ({ isMobile }) => {
   return (
     <>
       <MyIntro />
-      <h1 style={{ marginLeft: "4vw" }}>
-        <span role="img" aria-label="unicorn">
-          🦄
-        </span>
-        Featured
-        <br />
-        <br />
-      </h1>
       <ProjectsList
+        title="Featured"
         projects={data.projects
           .filter((a) => a.featured === true)
           .sort((a, b) => b.priority - a.priority)}
         isMobile={isMobile}
         filterOn={false}
       />
-      <h1 style={{ marginLeft: "4vw" }}>
-        <span role="img" aria-label="glowing stars">
-          ✨
-        </span>{" "}
-        Projects
-        <br />
-        <br />
-      </h1>
       <ProjectsList
+        title=""
         projects={data.projects
           .filter((a) => a.featured === false)
           .sort((a, b) => b.priority - a.priority)}

@@ -1,12 +1,22 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
-// .projects-filter {
-//   // padding-left: 10%;
-// }
+.projects-filter {
+  margin-top: 3em;
+  // padding-left: 10%;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  font-size: 1.4em;
+}
 
 .projects-cards {
   margin: 0 5% 1em 5%;
+  h1 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
 }
 
 .coverContainer {
@@ -42,16 +52,6 @@
     background-position: center center;
     background-size: cover;
   }
-
-  // .darkOverlay {
-  //   background-color: #151c22 !important;
-  //   position: absolute;
-  //   top: 0px;
-  //   opacity: 0.3;
-  //   width: 100%;
-  //   height: 100%;
-  // }
-
   .disapperWhenHover {
     opacity: 1;
     cursor: pointer;
@@ -69,7 +69,7 @@
 
 .project-info {
   position: relative;
-  top: 77%;
+  top: 74%;
   h3 {
     text-align: left;
     color: black;

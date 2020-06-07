@@ -2,7 +2,7 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 
-const ProjectsFilter = ({ categories, setSelected, selected }) => {
+const ProjectsFilter = ({ brand, categories, setSelected, selected }) => {
   return (
     <>
       <Navbar
@@ -12,6 +12,7 @@ const ProjectsFilter = ({ categories, setSelected, selected }) => {
         sticky="top"
         collapseOnSelect={true}
       >
+        <Navbar.Brand>{brand}</Navbar.Brand>
         <Navbar.Toggle>
           <small>{selected}</small>
         </Navbar.Toggle>

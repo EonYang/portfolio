@@ -7,13 +7,14 @@ import { animated, useTransition } from "react-spring";
 import { IProject } from "../types";
 
 interface IProjectsListProps {
+  title: string;
   projects: IProject[];
   isMobile: boolean;
   filterOn: boolean;
 }
 
 const ProjectsList: FC<IProjectsListProps> = React.memo(
-  ({ projects, isMobile, filterOn }) => {
+  ({ title, projects, isMobile, filterOn }) => {
     const containerRef = useRef(null);
     const { columns, windowWidth } = useClientWidth(
       containerRef,
@@ -54,7 +55,13 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
         );
     }, [selected, projects]);
 
-    const filterProps = { projects, categories, selected, setSelected };
+    const filterProps = {
+      brand: "Projects",
+      projects,
+      categories,
+      selected,
+      setSelected,
+    };
 
     const springConfig = { mass: 1, tension: 200, friction: 20 };
 
@@ -86,6 +93,7 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
 
     return (
       <div className="projects-cards" ref={containerRef}>
+        {title !== "" && <h1>{title}</h1>}
         {filterOn && <ProjectsFilter {...filterProps} />}
         <div
           className="position-relative "

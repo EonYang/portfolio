@@ -37,7 +37,7 @@ const ProjectCard = ({ project, isMobile, width, height }) => {
   let left = 0;
   // let left = width * 0.05;
   // width = width * 0.9;
-  height = height * 0.75;
+  height = height * 0.7;
 
   return (
     <>
