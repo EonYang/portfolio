@@ -1,9 +1,50 @@
-.embeded-pdf {
-  //   transform: scale3d(1.5, 1.5, 1);
-  //   //   width: 100vw;
-  //   //   height: 200vh;
-  //   margin-left: auto;
-  //   margin-right: auto;
+// .embeded-pdf {
+//   transform: scale3d(1.5, 1.5, 1);
+//   //   width: 100vw;
+//   //   height: 200vh;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+.simple-trans-main > div {
+  cursor: pointer;
+  position: absolute;
+  top: 61.8vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 800;
+  will-change: transform, opacity;
+}
+
+.resume-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 38.2vh;
+  margin: 10vh 32px 2vh 32px;
+
+  h1 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 5vh;
+    margin-bottom: 30px;
+    @include break($sm-min) {
+      font-size: 5vw;
+    }
+  }
+  h2 {
+    width: 100%;
+    font-weight: 500;
+    font-size: 3vh;
+    @include break($sm-min) {
+      font-size: 2.5vw;
+    }
+  }
 }
 
 .react-pdf__Page {
