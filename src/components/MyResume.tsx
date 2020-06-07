@@ -1,8 +1,8 @@
 //@ts-nocheck
 import React, { useState, useCallback } from "react";
 import { Document, Page } from "react-pdf/dist/umd/entry.webpack";
-import SWEResume from "data/Resume_Yang_Yang_SWE.pdf";
-import UXEResume from "data/Yang_Yang_UX-Engineer_Resume.pdf";
+import SWEResume from "data/Yang_Yang_SWE_Resume.pdf";
+import UXEResume from "data/Yang_Yang_Resume_UX-Engineer.pdf";
 import { Navbar, NavDropdown, Nav } from "react-bootstrap";
 import { useTransition, animated as a } from "react-spring";
 // const Resume = UXResume;
@@ -37,30 +37,26 @@ const MyResume = () => {
     <>
       <div className="resume-nav text-center">
         <h1>My Resume</h1>
-        <h2>
-          {/* <a href={Resume} download="Resume_Yang_Yang_SWE">
-            Download PDF
-          </a> */}
-        </h2>
+        <h2></h2>
         <Navbar bg="white" expand="sm">
           <Nav className="mx-auto">
-            <Nav.Link href="#home" onClick={selectSWE} active>
+            <Nav.Link href="#Software Engineer" onClick={selectSWE}>
               Software Engineer
             </Nav.Link>
-            <Nav.Link href="#link" onClick={selectUXE}>
+            <Nav.Link href="#UX Engineer" onClick={selectUXE}>
               UX Engineer
             </Nav.Link>
             <NavDropdown title="Download PDF" id="basic-nav-dropdown">
               <NavDropdown.Item
                 href={SWEResume}
-                download="Resume_Yang_Yang_SWE"
+                download="Yang_Yang_SWE_Resume"
               >
                 Software Engineer PDF
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item
                 href={UXEResume}
-                download="Resume_Yang_Yang_UXEngineer"
+                download="Yang_Yang_UXEngineer_Resume"
               >
                 UX Engineer PDF
               </NavDropdown.Item>
