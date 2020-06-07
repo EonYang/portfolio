@@ -7,14 +7,15 @@ import { animated, useTransition } from "react-spring";
 import { IProject } from "../types";
 
 interface IProjectsListProps {
-  title: string;
+  id?: string;
+  title?: string;
   projects: IProject[];
   isMobile: boolean;
   filterOn: boolean;
 }
 
 const ProjectsList: FC<IProjectsListProps> = React.memo(
-  ({ title, projects, isMobile, filterOn }) => {
+  ({ id, title, projects, isMobile, filterOn }) => {
     const containerRef = useRef(null);
     const { columns, windowWidth } = useClientWidth(
       containerRef,
@@ -57,6 +58,7 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
 
     const filterProps = {
       brand: "Projects",
+      scrollTo: id,
       projects,
       categories,
       selected,
@@ -92,8 +94,8 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
     });
 
     return (
-      <div className="projects-cards" ref={containerRef}>
-        {title !== "" && <h1>{title}</h1>}
+      <div id={id} className="projects-cards" ref={containerRef}>
+        {title !== undefined && <h1>{title}</h1>}
         {filterOn && <ProjectsFilter {...filterProps} />}
         <div
           className="position-relative "

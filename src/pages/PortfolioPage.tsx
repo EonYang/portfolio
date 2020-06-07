@@ -10,6 +10,7 @@ const PortfolioPage = ({ isMobile }) => {
     <>
       <MyIntro />
       <ProjectsList
+        id="featured-list"
         title="Featured"
         projects={data.projects
           .filter((a) => a.featured === true)
@@ -18,7 +19,7 @@ const PortfolioPage = ({ isMobile }) => {
         filterOn={false}
       />
       <ProjectsList
-        title=""
+        id="main-project-list"
         projects={data.projects
           .filter((a) => a.featured === false)
           .sort((a, b) => b.priority - a.priority)}
@@ -30,22 +31,5 @@ const PortfolioPage = ({ isMobile }) => {
     </>
   );
 };
-
-// const Para = ({ isMobile }) => {
-//   return (
-//     <>
-//       <div className="">
-//         <Parallax pages={5}>
-//           <ParallaxLayer offset={0} speed={0.2}></ParallaxLayer>
-//           <ParallaxLayer offset={0.7} speed={1}>
-//             <PortfolioPage {...{ isMobile }} />
-//           </ParallaxLayer>
-
-//           <ParallaxLayer offset={3} speed={1}></ParallaxLayer>
-//         </Parallax>
-//       </div>
-//     </>
-//   );
-// };
 
 export default React.memo(PortfolioPage);

@@ -2,7 +2,18 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 
-const ProjectsFilter = ({ brand, categories, setSelected, selected }) => {
+const ProjectsFilter = ({
+  scrollTo,
+  brand,
+  categories,
+  setSelected,
+  selected,
+}) => {
+  const onselectHandler = () => {
+    document.getElementById(scrollTo).scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <Navbar
@@ -11,6 +22,7 @@ const ProjectsFilter = ({ brand, categories, setSelected, selected }) => {
         bg="white"
         sticky="top"
         collapseOnSelect={true}
+        onSelect={onselectHandler}
       >
         <Navbar.Brand>{brand}</Navbar.Brand>
         <Navbar.Toggle>
