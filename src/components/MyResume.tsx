@@ -37,7 +37,6 @@ const MyResume = () => {
     <>
       <div className="resume-nav text-center">
         <h1>My Resume</h1>
-        <h2></h2>
         <Navbar bg="white" expand="sm">
           <Nav className="mx-auto">
             <Nav.Link href="#Software Engineer" onClick={selectSWE}>

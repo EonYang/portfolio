@@ -52,6 +52,10 @@
     background-position: center center;
     background-size: cover;
   }
+
+  .opacity-0 {
+    opacity: 0 !important;
+  }
   .disapperWhenHover {
     opacity: 1;
     cursor: pointer;
@@ -63,6 +67,11 @@
 
     &:hover {
       opacity: 0;
+      -webkit-transition: opacity 2s;
+      -moz-transition: opacity 2s;
+      -ms-transition: opacity 2s;
+      -o-transition: opacity 2s;
+      transition: opacity 2s;
     }
   }
 }

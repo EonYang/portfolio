@@ -1,32 +1,75 @@
-//@ts-nocheck
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useRef, FC, useEffect } from "react";
 import Tools from "../utils/Tools";
+import { IProject } from "types";
 // import { Link } from "react-router-dom";
 
-const ProjectCard = ({ project, isMobile, width, height }) => {
-  const videoRef = useRef(null);
+interface IProjectCardProps {
+  project: IProject;
+  isMobile: boolean;
+  width: number;
+  height: number;
+}
 
-  const onMouseEnterPlayVideo = useCallback(() => {
+const ProjectCard: FC<IProjectCardProps> = ({
+  project,
+  isMobile,
+  width,
+  height,
+}) => {
+  const videoRef = useRef(null);
+  const videoCurtain = useRef(null);
+
+  const playVideo = useCallback(() => {
+    console.log("called playing");
     const isPlaying =
       videoRef.current.currentTime > 0 &&
       !videoRef.current.paused &&
       !videoRef.current.ended &&
       videoRef.current.readyState > 2;
+
+    videoCurtain.current && videoCurtain.current.classList.add("opacity-0");
 
     if (!isPlaying) {
       videoRef.current.play();
     }
   }, []);
 
-  const onMouseLeaveStopVideo = useCallback(() => {
+  const stopVideo = useCallback(() => {
     const isPlaying =
       videoRef.current.currentTime > 0 &&
       !videoRef.current.paused &&
       !videoRef.current.ended &&
       videoRef.current.readyState > 2;
+    videoCurtain.current && videoCurtain.current.classList.remove("opacity-0");
     if (isPlaying) {
       videoRef.current.pause();
     }
+  }, []);
+
+  // const [ratio, setRatio] = useState(0);
+
+  const observer = useRef(
+    new IntersectionObserver(
+      (entries) => {
+        if (entries[0].intersectionRatio >= 0.8) {
+          console.log("play video");
+          playVideo();
+          setTimeout(stopVideo, 1500);
+        }
+      },
+      {
+        rootMargin: "0px 0px -30% 0px",
+        threshold: [0.8, 0.9],
+      }
+    )
+  );
+
+  useEffect(() => {
+    let observerCurrent = observer.current;
+    observerCurrent.observe(videoRef.current);
+    return () => {
+      observerCurrent.disconnect();
+    };
   }, []);
 
   if (!project) {
@@ -57,14 +100,14 @@ const ProjectCard = ({ project, isMobile, width, height }) => {
           ref={videoRef}
           style={{ top: "0px" }}
           src={require(`../data/${project.cover.animation}`)}
-          type="video/mp4"
-          loop="loop"
+          loop={true}
           playsInline={true}
         ></video>
         <div
           className="w-100 h-100 position-absolute cover disapperWhenHover"
-          onMouseEnter={onMouseEnterPlayVideo}
-          onMouseLeave={onMouseLeaveStopVideo}
+          onMouseEnter={playVideo}
+          onMouseLeave={stopVideo}
+          ref={videoCurtain}
           style={{
             top: "0px",
             width,
@@ -80,6 +123,7 @@ const ProjectCard = ({ project, isMobile, width, height }) => {
           width,
         }}
       >
+        {/* <h3 className="text-uppercase">{ratio}</h3> */}
         <h3 className="text-uppercase">{project.title}</h3>
         <p>{project.teaser}</p>
       </div>
