@@ -43,8 +43,7 @@ const data: IData = {
       },
       link: new URL("http://yangyang.blog/articles/2019/04/magical-pencil/"),
       time: "April, 2019",
-      teaser:
-        "An ITP-ish video game, made with New Interaction, Machine Learning, Creativity, Storytelling and Love.",
+      teaser: "An untraditional video game made with Unity, C#, and TensorFlow",
       category: [Cate.fullStack, Cate.deisgnAndAnimation],
       tags: [Tag.ml, Tag.storytelling],
     },
@@ -62,7 +61,8 @@ const data: IData = {
         "http://yangyang.blog/articles/2020/03/reactjs-webvr-3d-portfolio/"
       ),
       time: "March, 2020",
-      teaser: "An protorype, made of WebVR",
+      teaser:
+        "A Virtual Reality gallery in the browser, made with React.js and WebVR.",
       category: [Cate.frontEnd, Cate.creativeTech],
       tags: [Tag.react, Tag.vr],
     },
@@ -79,7 +79,7 @@ const data: IData = {
       link: new URL("http://yangyang.blog/articles/2019/02/simple-mirror/"),
       time: "Dec, 2017",
       teaser:
-        "In our mind, instead of a realistic hi-resolution beautiful appearances, our constant awareness of ourselves is just a vague and sketchy arrangement of abstract and simplified figures, which is being reflected by this simple mirror.",
+        "An interactive new media art installation publicly exhibited in LaMama Gallery, NYC.",
       category: [Cate.creativeTech],
       tags: [Tag.installation],
     },
@@ -96,7 +96,7 @@ const data: IData = {
       link: new URL("http://yangyang.blog/articles/2019/02/new-toy/"),
       time: "Dec, 2018",
       teaser:
-        "What instrument can serve as a expressive role in this era's live digital music performence.",
+        "An physical instrument that can serve as a expressive role in this era's live digital music performence.",
       category: [Cate.creativeTech],
       tags: [Tag.arduino],
     },
@@ -112,7 +112,8 @@ const data: IData = {
       },
       link: new URL("http://yangyang.blog/articles/2019/02/oblivion/"),
       time: "Nov, 2018",
-      teaser: "A tiny story created for a unconventional screen.",
+      teaser:
+        "Fusion Film Festival 2019, Best Animation Short winner. A story created for an 11:1 screen made with Cinema 4D.",
       category: [Cate.deisgnAndAnimation, Cate.creativeTech],
       tags: [Tag.animation, Tag.afterEffect, Tag.c4d],
     },
@@ -130,7 +131,8 @@ const data: IData = {
         "http://yangyang.blog/articles/2019/02/its-time-to-go-to-time/"
       ),
       time: "Apr, 2018",
-      teaser: "A unconventional VR experience.",
+      teaser:
+        "A unconventional VR experience, created with GVR SDK and RTMP Streaming protocol.",
       category: [Cate.creativeTech, Cate.fullStack],
       tags: [Tag.vr, Tag.installation],
     },
@@ -165,7 +167,7 @@ const data: IData = {
       },
       link: new URL("http://yangyang.blog/articles/2019/02/todd/"),
       time: "Oct, 2018",
-      teaser: "Todd is an alcoholic hamster and a retired Jedi.",
+      teaser: "Todd is an alcoholic hamster and a retired Jedi. ",
       category: [Cate.deisgnAndAnimation, Cate.creativeTech],
       tags: [Tag.design, Tag.dddPrint],
     },
@@ -181,8 +183,7 @@ const data: IData = {
       },
       link: new URL("http://yangyang.blog/articles/2019/02/bully/"),
       time: "Mar, 2018",
-      teaser:
-        "Bully is a web-based multiplayer game that represents the essence of our world —— bully.",
+      teaser: "A web-based multiplayer game made with Socket.io and Node.js.",
       category: [Cate.fullStack],
       tags: [Tag.game, Tag.nodeJs],
     },
@@ -198,7 +199,8 @@ const data: IData = {
       },
       link: new URL("http://yangyang.blog/articles/2019/02/zen-dog/"),
       time: "Mar, 2018",
-      teaser: "Yo dog come to my dojo and meditate like a Zen master",
+      teaser:
+        "A dojo for friends to meditate together and become Zen Masters, made with Node.js, Socket.io and MongoDB.",
       category: [Cate.fullStack],
       tags: [Tag.game, Tag.nodeJs],
     },
@@ -214,7 +216,7 @@ const data: IData = {
       },
       link: new URL("http://yangyang.blog/articles/2019/02/which-pill/"),
       time: "Dec, 2018",
-      teaser: "Only one of those players will survive.",
+      teaser: "A survival game mede with Node.js and Socket.io.",
       category: [Cate.fullStack, Cate.frontEnd],
       tags: [Tag.game, Tag.nodeJs],
     },
@@ -232,7 +234,7 @@ const data: IData = {
         "http://yangyang.blog/articles/2019/03/my-p5-js-projects-compilation/"
       ),
       time: "Nov, 2017",
-      teaser: "Come and see my dark humor.",
+      teaser: "An interactive gallery of my creations.",
       category: [Cate.creativeTech],
       tags: [Tag.game, Tag.graphic],
     },
@@ -250,7 +252,8 @@ const data: IData = {
         "http://yangyang.blog/articles/2019/03/projects-before-itp/"
       ),
       time: "Dec, 2016",
-      teaser: "I was a productive product designer",
+      teaser:
+        "A collection of projects designed by me before I attend to New York University.",
       category: [Cate.deisgnAndAnimation],
       tags: [Tag.design, Tag.app],
     },
@@ -268,7 +271,7 @@ const data: IData = {
         "http://yangyang.blog/articles/2019/03/poster-design-for-2018-itp-spring-show/"
       ),
       time: "Oct, 2017",
-      teaser: "Poster Design Campain Winner",
+      teaser: "Poster Design Campain Winner at New York University.",
       category: [Cate.deisgnAndAnimation],
       tags: [Tag.design, Tag.animation, Tag.graphic],
     },
@@ -286,7 +289,8 @@ const data: IData = {
         "http://yangyang.blog/articles/2020/04/thesis-archive-2020/"
       ),
       time: "Apr, 2020",
-      teaser: "A gallery full of suprises.",
+      teaser:
+        "An interactive art gallery experience made with React.js and TypeScript.",
       category: [Cate.frontEnd],
       tags: [Tag.react, Tag.nodeJs, Tag.ts],
     },
@@ -302,7 +306,7 @@ const data: IData = {
       },
       link: new URL("http://yangyang.blog/articles/2020/04/covid-19-ticker/"),
       time: "Mar, 2020",
-      teaser: "An app displays COVID-19 statistics",
+      teaser: "An COVID-19 macOS app tracker made with Swift and Cocoa.",
       category: [Cate.frontEnd, Cate.deisgnAndAnimation],
       tags: [Tag.react, Tag.nodeJs, Tag.ts, Tag.app],
     },
