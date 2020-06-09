@@ -4,14 +4,19 @@ import data from "../data/content";
 import MyIntro from "components/MyIntro";
 import MySocialMedias from "../components/MySocialMedias";
 // import { Parallax, ParallaxLayer } from "react-spring/addons";
-
+import { WiStars } from "react-icons/wi";
 const PortfolioPage = ({ isMobile }) => {
   return (
     <>
       <MyIntro />
       <ProjectsList
         id="featured-list"
-        title="Featured"
+        title={
+          <h1>
+            {"Featured"}
+            <WiStars />
+          </h1>
+        }
         projects={data.projects
           .filter((a) => a.featured === true)
           .sort((a, b) => b.priority - a.priority)}

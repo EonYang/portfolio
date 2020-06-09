@@ -82,17 +82,18 @@
   h3 {
     text-align: left;
     color: black;
-    font-size: large;
+    font-size: 4vw;
 
-    @include break($sm-min) {
-      font-size: xx-large;
+    @include break($md-min) {
+      font-size: 2vw;
     }
   }
   p {
     color: gray;
     font-size: small;
-    @include break($sm-min) {
-      font-size: large;
+    font-size: 3vw;
+    @include break($md-min) {
+      font-size: 1.5vw;
     }
   }
 }

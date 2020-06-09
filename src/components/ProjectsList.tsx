@@ -8,7 +8,7 @@ import { IProject } from "../types";
 
 interface IProjectsListProps {
   id?: string;
-  title?: string;
+  title?: React.ReactNode;
   projects: IProject[];
   isMobile: boolean;
   filterOn: boolean;
@@ -95,7 +95,7 @@ const ProjectsList: FC<IProjectsListProps> = React.memo(
 
     return (
       <div id={id} className="projects-cards" ref={containerRef}>
-        {title !== undefined && <h1>{title}</h1>}
+        {title !== undefined && title}
         {filterOn && <ProjectsFilter {...filterProps} />}
         <div
           className="position-relative "
