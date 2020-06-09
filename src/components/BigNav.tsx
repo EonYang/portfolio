@@ -6,7 +6,7 @@ import { useCallback } from "react";
 
 const NAV_ITEMS = [
   { id: 0, name: "Portfolio", link: "/" },
-  { id: 1, name: "About", link: "/about" },
+  { id: 1, name: "Resume", link: "/resume" },
   { id: 2, name: "Blog", link: "http://yangyang.blog/articles" },
 ];
 
