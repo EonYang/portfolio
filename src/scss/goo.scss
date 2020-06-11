@@ -1,0 +1,63 @@
+$size: 30px;
+
+.hooks-main > svg {
+  display: none;
+}
+
+.hooks-main > div {
+  position: absolute;
+  will-change: transform;
+  border-radius: 50%;
+  background: #dfdfdf98;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+  opacity: 0.3;
+}
+
+.hooks-main > div:nth-child(1) {
+  width: $size * 2;
+  height: $size * 2;
+}
+
+.hooks-main > div:nth-child(2) {
+  width: $size * 4;
+  height: $size * 4;
+}
+
+.hooks-main > div:nth-child(3) {
+  width: $size * 2.5;
+  height: $size * 2.5;
+}
+
+.hooks-main > div::after {
+  content: "";
+  position: absolute;
+  top: $size * 0.3;
+  left: $size * 0.3;
+  width: $size * 0.6;
+  height: $size * 0.6;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hooks-main > div:nth-child(2)::after {
+  top: $size * 1.2;
+  left: $size * 1.2;
+  width: $size * 1.2;
+  height: $size * 1.2;
+}
+
+.hooks-main > div:nth-child(3)::after {
+  top: $size * 0.8;
+  left: $size * 0.8;
+  width: $size * 0.8;
+  height: $size * 0.8;
+}
+
+.hooks-main {
+  position: absolute;
+  left: -5%;
+  width: 100vw;
+  height: 80vh;
+  filter: url("#goo");
+  overflow: hidden;
+}

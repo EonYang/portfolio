@@ -5,6 +5,7 @@
 @import "./mixins.scss";
 @import "./resume.scss";
 @import "./projects.scss";
+@import "./goo.scss";
 
 body {
   color: $text-color-main;
@@ -24,15 +25,18 @@ a:link {
 }
 
 .hero {
+  background-color: #ffffff00;
   position: relative;
+  top: 80px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
-  height: 38.2vh;
-  margin: 10vh 32px;
+  height: 61.2vh;
+  margin: 1% 5%;
   @include break($sm-min) {
-    margin: 5vh 8%;
+    top: 80px;
+    margin: 5vh 5%;
     height: 61.8vh;
   }
 
@@ -45,12 +49,13 @@ a:link {
       font-size: 5vw;
     }
   }
-  h2 {
+  p {
     width: 100%;
     font-weight: 500;
-    font-size: 3vh;
+    font-size: 2vh;
     @include break($sm-min) {
-      font-size: 2.5vw;
+      width: 80%;
+      font-size: 2vw;
     }
   }
 }
