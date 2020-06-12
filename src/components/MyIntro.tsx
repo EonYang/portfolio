@@ -10,7 +10,7 @@ const MyIntroHero = () => {
     <Jumbotron className="hero">
       <h1>Hi, I'm Yang</h1>
       <p>
-        a software engineer who has experience as a Product and UX Designer.
+        a software engineer who has experience as a product and UX designer.
         While studying at NYU, I discovered my interest in programming and
         started to combine it with design and decided to pursue a professional
         career in full-stack software engineering.
