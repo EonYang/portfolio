@@ -1,6 +1,6 @@
 //@ts-nocheck
 import React from "react";
-import { FaGithub, FaLinkedin, FaBriefcase } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const MySocialMedias = () => (
   <div className="about">
@@ -16,12 +16,12 @@ const MySocialMedias = () => (
           className="nav-link"
           href="https://www.linkedin.com/in/yang-yang-992a9a61/"
         >
-          <FaLinkedin size={32} color="black" />
+          <FaLinkedinIn size={32} color="black" />
         </a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="http://yangyang.blog/">
-          <FaBriefcase size={32} color="black" />
+        <a className="nav-link" href="https://www.instagram.com/yang_2473/">
+          <FaInstagram size={32} color="black" />
         </a>
       </li>
     </ul>
