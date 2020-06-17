@@ -16,9 +16,9 @@ const App = () => {
       <Router basename="/portfolio">
         <Header />
         <Switch>
-          <Route path="/project/:id">
+          {/* <Route path="/project/:id">
             <ProjectDetail />
-          </Route>
+          </Route> */}
           <Route path="/resume">
             <MyResume />
           </Route>
