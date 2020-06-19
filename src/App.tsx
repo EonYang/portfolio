@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import { testIfMobile } from "./utils/Tools";
 import Header from "./components/Header";
-// import ProjectDetail from "pages/ProjectDetail";
 import MyResume from "components/MyResume";
 
 const App = () => {
@@ -16,9 +15,6 @@ const App = () => {
       <Router basename="/portfolio">
         <Header />
         <Switch>
-          {/* <Route path="/project/:id">
-            <ProjectDetail />
-          </Route> */}
           <Route path="/resume">
             <MyResume />
           </Route>
